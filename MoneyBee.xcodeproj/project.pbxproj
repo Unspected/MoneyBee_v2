@@ -28,6 +28,8 @@
 		DDDF64172A64511300396F86 /* Extension + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF64162A64511300396F86 /* Extension + String.swift */; };
 		DDDF64192A64512A00396F86 /* Extension + Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF64182A64512A00396F86 /* Extension + Alert.swift */; };
 		DDDF641B2A64514C00396F86 /* Extension + Combine_TapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF641A2A64514C00396F86 /* Extension + Combine_TapButton.swift */; };
+		DDDF641D2A64543B00396F86 /* BudgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF641C2A64543B00396F86 /* BudgetViewModel.swift */; };
+		DDDF641F2A64544800396F86 /* BudgetViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF641E2A64544800396F86 /* BudgetViewModelImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		DDDF64162A64511300396F86 /* Extension + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + String.swift"; sourceTree = "<group>"; };
 		DDDF64182A64512A00396F86 /* Extension + Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + Alert.swift"; sourceTree = "<group>"; };
 		DDDF641A2A64514C00396F86 /* Extension + Combine_TapButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + Combine_TapButton.swift"; sourceTree = "<group>"; };
+		DDDF641C2A64543B00396F86 /* BudgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewModel.swift; sourceTree = "<group>"; };
+		DDDF641E2A64544800396F86 /* BudgetViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewModelImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,8 @@
 		DDDF64062A644D8200396F86 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DDDF641C2A64543B00396F86 /* BudgetViewModel.swift */,
+				DDDF641E2A64544800396F86 /* BudgetViewModelImpl.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -268,7 +274,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDDF640D2A64503B00396F86 /* Extensions + Color.swift in Sources */,
+				DDDF641F2A64544800396F86 /* BudgetViewModelImpl.swift in Sources */,
 				DDDF64152A6450F500396F86 /* Extensions + Combine_TextField.swift in Sources */,
+				DDDF641D2A64543B00396F86 /* BudgetViewModel.swift in Sources */,
 				DDDF64172A64511300396F86 /* Extension + String.swift in Sources */,
 				DDDF63FB2A644CA100396F86 /* LoginViewController.swift in Sources */,
 				DDDF63E22A644B1000396F86 /* ViewController.swift in Sources */,
