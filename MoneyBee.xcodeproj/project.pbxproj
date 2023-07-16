@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DDDF63DE2A644B1000396F86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF63DD2A644B1000396F86 /* AppDelegate.swift */; };
 		DDDF63E02A644B1000396F86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF63DF2A644B1000396F86 /* SceneDelegate.swift */; };
-		DDDF63E22A644B1000396F86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF63E12A644B1000396F86 /* ViewController.swift */; };
 		DDDF63E72A644B1100396F86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDDF63E62A644B1100396F86 /* Assets.xcassets */; };
 		DDDF63EA2A644B1100396F86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDF63E82A644B1100396F86 /* LaunchScreen.storyboard */; };
 		DDDF63F32A644BA300396F86 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF63F22A644BA300396F86 /* UserModel.swift */; };
@@ -36,7 +35,6 @@
 		DDDF63DA2A644B1000396F86 /* MoneyBee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyBee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDDF63DD2A644B1000396F86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDDF63DF2A644B1000396F86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DDDF63E12A644B1000396F86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DDDF63E62A644B1100396F86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDDF63E92A644B1100396F86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDDF63EB2A644B1100396F86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 				DDDF64042A644D7400396F86 /* Budget */,
 				DDDF63F72A644C7E00396F86 /* Login */,
 				DDDF63F62A644BE500396F86 /* SystemFiles */,
-				DDDF63E12A644B1000396F86 /* ViewController.swift */,
 				DDDF63E62A644B1100396F86 /* Assets.xcassets */,
 				DDDF63E82A644B1100396F86 /* LaunchScreen.storyboard */,
 				DDDF63EB2A644B1100396F86 /* Info.plist */,
@@ -279,7 +276,6 @@
 				DDDF641D2A64543B00396F86 /* BudgetViewModel.swift in Sources */,
 				DDDF64172A64511300396F86 /* Extension + String.swift in Sources */,
 				DDDF63FB2A644CA100396F86 /* LoginViewController.swift in Sources */,
-				DDDF63E22A644B1000396F86 /* ViewController.swift in Sources */,
 				DDDF63FF2A644CBD00396F86 /* LoginViewModelImpl.swift in Sources */,
 				DDDF63DE2A644B1000396F86 /* AppDelegate.swift in Sources */,
 				DDDF641B2A64514C00396F86 /* Extension + Combine_TapButton.swift in Sources */,

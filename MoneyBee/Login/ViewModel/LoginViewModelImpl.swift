@@ -8,7 +8,6 @@ import UIKit
 
 class LoginViewModelImpl: LoginViewModel {
     
-    var goals = CurrentValueSubject<[GoalModel], Never>([])
     
     let users = [UserModel(userName: "pasha", password: "123", email: ""),
                  UserModel(userName: "masha", password: "321", email: ""),
@@ -18,25 +17,7 @@ class LoginViewModelImpl: LoginViewModel {
     ]
     
     
-    func fetchUser(url: URL) {
-        URLSession.shared.dataTaskPublisher(for: url)
-            .tryMap() { element -> Data in
-                guard let httpResponse = element.response as? HTTPURLResponse,
-                    httpResponse.statusCode == 200 else {
-                        throw URLError(.badServerResponse)
-                    }
-                return element.data
-                }
-            .decode(type: [GoalModel].self, decoder: JSONDecoder())
-            .sink(receiveCompletion: { print ("Received completion: \($0).") },
-                  receiveValue: { [weak self] value in
-                self?.goals.value = value
-            })
-            .store(in: &cancellable)
-    }
-    
     init() {
-        fetchUser(url: URL(string: "lalala")!)
     }
     
     

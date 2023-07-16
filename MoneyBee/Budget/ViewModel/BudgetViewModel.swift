@@ -6,7 +6,11 @@
 //
 
 import Foundation
+import Combine
 
-class BudgetViewModel {
+protocol BudgetViewModel {
+    
+    var goals: CurrentValueSubject<[GoalModel],Never> { get }
+    func fetchGoals()
     
 }
