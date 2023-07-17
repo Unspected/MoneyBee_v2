@@ -23,13 +23,13 @@ class GradientButton: UIButton {
         // Set the colors
         gradientLayer.colors = [startColor.cgColor, endColor.cgColor]
         // Gradient is linear from left to right
-        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
-        gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
+        gradientLayer.startPoint = CGPoint(x: 0.1, y: 0.1)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
         
         // Add gradient layer into the button
         layer.insertSublayer(gradientLayer, at: 0)
         // Round the button corners
-        layer.cornerRadius = 10
+        layer.cornerRadius = 15
         clipsToBounds = true
         
     }

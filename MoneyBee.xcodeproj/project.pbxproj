@@ -29,6 +29,7 @@
 		DDDF641B2A64514C00396F86 /* Extension + Combine_TapButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF641A2A64514C00396F86 /* Extension + Combine_TapButton.swift */; };
 		DDDF641D2A64543B00396F86 /* BudgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF641C2A64543B00396F86 /* BudgetViewModel.swift */; };
 		DDDF641F2A64544800396F86 /* BudgetViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF641E2A64544800396F86 /* BudgetViewModelImpl.swift */; };
+		DDDF642C2A650F5800396F86 /* RegisterationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF642B2A650F5800396F86 /* RegisterationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		DDDF641A2A64514C00396F86 /* Extension + Combine_TapButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + Combine_TapButton.swift"; sourceTree = "<group>"; };
 		DDDF641C2A64543B00396F86 /* BudgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewModel.swift; sourceTree = "<group>"; };
 		DDDF641E2A64544800396F86 /* BudgetViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewModelImpl.swift; sourceTree = "<group>"; };
+		DDDF642B2A650F5800396F86 /* RegisterationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,9 +90,11 @@
 		DDDF63DC2A644B1000396F86 /* MoneyBee */ = {
 			isa = PBXGroup;
 			children = (
+				DDDF64282A65055800396F86 /* Components */,
 				DDDF64032A644D5400396F86 /* Extensions */,
 				DDDF63F12A644B7C00396F86 /* Models */,
 				DDDF64042A644D7400396F86 /* Budget */,
+				DDDF64252A6462D100396F86 /* Registration */,
 				DDDF63F72A644C7E00396F86 /* Login */,
 				DDDF63F62A644BE500396F86 /* SystemFiles */,
 				DDDF63E62A644B1100396F86 /* Assets.xcassets */,
@@ -194,6 +198,37 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		DDDF64252A6462D100396F86 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				DDDF64272A6462E800396F86 /* ViewModel */,
+				DDDF64262A6462E300396F86 /* View */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		DDDF64262A6462E300396F86 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DDDF642B2A650F5800396F86 /* RegisterationViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DDDF64272A6462E800396F86 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DDDF64282A65055800396F86 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -275,6 +310,7 @@
 				DDDF64152A6450F500396F86 /* Extensions + Combine_TextField.swift in Sources */,
 				DDDF641D2A64543B00396F86 /* BudgetViewModel.swift in Sources */,
 				DDDF64172A64511300396F86 /* Extension + String.swift in Sources */,
+				DDDF642C2A650F5800396F86 /* RegisterationViewController.swift in Sources */,
 				DDDF63FB2A644CA100396F86 /* LoginViewController.swift in Sources */,
 				DDDF63FF2A644CBD00396F86 /* LoginViewModelImpl.swift in Sources */,
 				DDDF63DE2A644B1000396F86 /* AppDelegate.swift in Sources */,

@@ -65,7 +65,7 @@ class LoginViewController: UIViewController {
         let button = GradientButton()
         button.setTitle("Sign In", for: .normal)
         button.setTitleColor(UIColor.whiteColor, for: .normal)
-        button.layer.cornerRadius = 10
+      
         return button
     }()
     
@@ -73,10 +73,10 @@ class LoginViewController: UIViewController {
         let button = GradientButton()
         button.setTitle("Create Account", for: .normal)
         button.setTitleColor(UIColor.whiteColor, for: .normal)
-        button.layer.cornerRadius = 10
-        button.translatesAutoresizingMaskIntoConstraints = false
+        
         return button
     }()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,6 +115,14 @@ class LoginViewController: UIViewController {
             self.viewModel.authorization()
         }.store(in: &cancellable)
         
+        
+        createAccountButton.publisher(forEvent: .touchUpInside).sink { [weak self] _ in
+            let vc = RegisterationViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self?.present(vc, animated: true)
+        }.store(in: &cancellable)
+        
+        
     }
     
     private func setupViews() {
@@ -128,7 +136,6 @@ class LoginViewController: UIViewController {
             passwordTextField
             signInButton
             createAccountButton
-
         }
         
     }
