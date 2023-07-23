@@ -71,7 +71,7 @@ class LoginViewController: UIViewController {
     
     private let createAccountButton: UIButton = {
         let button = GradientButton()
-        button.setTitle("Create Account", for: .normal)
+        button.setTitle("Sign Up", for: .normal)
         button.setTitleColor(UIColor.whiteColor, for: .normal)
         
         return button
@@ -117,7 +117,7 @@ class LoginViewController: UIViewController {
         
         
         createAccountButton.publisher(forEvent: .touchUpInside).sink { [weak self] _ in
-            let vc = RegisterationViewController()
+            let vc = RegisterationViewController(viewModel: RegisterViewModelImpl())
             vc.modalPresentationStyle = .fullScreen
             self?.present(vc, animated: true)
         }.store(in: &cancellable)
