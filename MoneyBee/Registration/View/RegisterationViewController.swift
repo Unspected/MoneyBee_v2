@@ -171,7 +171,12 @@ class RegisterationViewController: UIViewController {
         
         Observable.combineLatest(viewModel.validUserData, viewModel.validPassword).subscribe { [weak self] isValidLogin, isValidPass in
             if isValidLogin && isValidPass {
-                self?.simpleAlert(title: "Success", message: "User successfully created", buttonTitle: "ok")
+                guard let self else { return }
+                self.simpleAlert(title: "Success", message: "User successfully created", buttonTitle: "ok")
+                self.usernameTextField.text = ""
+                self.emailTextField.text = ""
+                self.passwordTextField.text = ""
+                self.confirmPasswordTextField.text = ""
             }
         }.disposed(by: disposeBag)
         

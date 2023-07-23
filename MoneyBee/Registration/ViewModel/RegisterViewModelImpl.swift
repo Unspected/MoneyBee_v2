@@ -48,7 +48,7 @@ class RegisterViewModelImpl: RegisterViewModel {
                 self.validUserData.onNext(false)
             }
         }.dispose()
-        
+    
 //        Observable.combineLatest(validUserData, validPassword).subscribe { validUserAndEmail, validPassword in
 //            if validUserAndEmail && validPassword {
 //                self.isValidFullUserData.onNext(true)
