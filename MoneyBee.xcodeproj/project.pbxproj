@@ -35,6 +35,10 @@
 		DDDF641D2A64543B00396F86 /* BudgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF641C2A64543B00396F86 /* BudgetViewModel.swift */; };
 		DDDF641F2A64544800396F86 /* BudgetViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF641E2A64544800396F86 /* BudgetViewModelImpl.swift */; };
 		DDDF642C2A650F5800396F86 /* RegisterationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF642B2A650F5800396F86 /* RegisterationViewController.swift */; };
+		DDECF6D52A721076009094F2 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDECF6D42A721076009094F2 /* AppCoordinator.swift */; };
+		DDECF6D82A7210AF009094F2 /* XCoordinator in Frameworks */ = {isa = PBXBuildFile; productRef = DDECF6D72A7210AF009094F2 /* XCoordinator */; };
+		DDECF6DA2A7210AF009094F2 /* XCoordinatorCombine in Frameworks */ = {isa = PBXBuildFile; productRef = DDECF6D92A7210AF009094F2 /* XCoordinatorCombine */; };
+		DDECF6DC2A7210AF009094F2 /* XCoordinatorRx in Frameworks */ = {isa = PBXBuildFile; productRef = DDECF6DB2A7210AF009094F2 /* XCoordinatorRx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -79,6 +83,7 @@
 		DDDF641C2A64543B00396F86 /* BudgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewModel.swift; sourceTree = "<group>"; };
 		DDDF641E2A64544800396F86 /* BudgetViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewModelImpl.swift; sourceTree = "<group>"; };
 		DDDF642B2A650F5800396F86 /* RegisterationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterationViewController.swift; sourceTree = "<group>"; };
+		DDECF6D42A721076009094F2 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +91,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDECF6DA2A7210AF009094F2 /* XCoordinatorCombine in Frameworks */,
+				DDECF6D82A7210AF009094F2 /* XCoordinator in Frameworks */,
+				DDECF6DC2A7210AF009094F2 /* XCoordinatorRx in Frameworks */,
 				DDB1F63E2A67A7B00080A148 /* RxSwift in Frameworks */,
 				DDB1F63C2A67A7B00080A148 /* RxCocoa in Frameworks */,
 				DDDF64022A644D0900396F86 /* Stevia in Frameworks */,
@@ -123,6 +131,7 @@
 		DDDF63DC2A644B1000396F86 /* MoneyBee */ = {
 			isa = PBXGroup;
 			children = (
+				DDECF6D22A72105A009094F2 /* Navigation */,
 				DDDF64282A65055800396F86 /* Components */,
 				DDDF64032A644D5400396F86 /* Extensions */,
 				DDDF63F12A644B7C00396F86 /* Models */,
@@ -265,6 +274,22 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		DDECF6D22A72105A009094F2 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				DDECF6D32A721061009094F2 /* Coordinator */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		DDECF6D32A721061009094F2 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DDECF6D42A721076009094F2 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -286,6 +311,9 @@
 				DDDF64012A644D0900396F86 /* Stevia */,
 				DDB1F63B2A67A7B00080A148 /* RxCocoa */,
 				DDB1F63D2A67A7B00080A148 /* RxSwift */,
+				DDECF6D72A7210AF009094F2 /* XCoordinator */,
+				DDECF6D92A7210AF009094F2 /* XCoordinatorCombine */,
+				DDECF6DB2A7210AF009094F2 /* XCoordinatorRx */,
 			);
 			productName = MoneyBee;
 			productReference = DDDF63DA2A644B1000396F86 /* MoneyBee.app */;
@@ -318,6 +346,7 @@
 			packageReferences = (
 				DDDF64002A644D0900396F86 /* XCRemoteSwiftPackageReference "Stevia" */,
 				DDB1F63A2A67A7B00080A148 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				DDECF6D62A7210AF009094F2 /* XCRemoteSwiftPackageReference "XCoordinator" */,
 			);
 			productRefGroup = DDDF63DB2A644B1000396F86 /* Products */;
 			projectDirPath = "";
@@ -357,6 +386,7 @@
 				DDDF63DE2A644B1000396F86 /* AppDelegate.swift in Sources */,
 				DDDF641B2A64514C00396F86 /* Extension + Combine_TapButton.swift in Sources */,
 				DDDF64092A644DAE00396F86 /* BudgetViewController.swift in Sources */,
+				DDECF6D52A721076009094F2 /* AppCoordinator.swift in Sources */,
 				DDB1F6422A67A7E00080A148 /* RegisterViewModelImpl.swift in Sources */,
 				DDDF63F52A644BAF00396F86 /* GoalModel.swift in Sources */,
 				DDDF640B2A644DCF00396F86 /* BudgetTableViewCell.swift in Sources */,
@@ -601,6 +631,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		DDECF6D62A7210AF009094F2 /* XCRemoteSwiftPackageReference "XCoordinator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/QuickBirdEng/XCoordinator";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -618,6 +656,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DDDF64002A644D0900396F86 /* XCRemoteSwiftPackageReference "Stevia" */;
 			productName = Stevia;
+		};
+		DDECF6D72A7210AF009094F2 /* XCoordinator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDECF6D62A7210AF009094F2 /* XCRemoteSwiftPackageReference "XCoordinator" */;
+			productName = XCoordinator;
+		};
+		DDECF6D92A7210AF009094F2 /* XCoordinatorCombine */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDECF6D62A7210AF009094F2 /* XCRemoteSwiftPackageReference "XCoordinator" */;
+			productName = XCoordinatorCombine;
+		};
+		DDECF6DB2A7210AF009094F2 /* XCoordinatorRx */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDECF6D62A7210AF009094F2 /* XCRemoteSwiftPackageReference "XCoordinator" */;
+			productName = XCoordinatorRx;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

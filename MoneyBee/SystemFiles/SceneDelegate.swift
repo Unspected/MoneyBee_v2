@@ -6,18 +6,28 @@
 //
 
 import UIKit
+import XCoordinator
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    let router = AppCoordinator().strongRouter
 
-
+//    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+//        guard let windowScene = (scene as? UIWindowScene) else { return }
+//        window = UIWindow(windowScene: windowScene)
+//        let viewModel = RegisterViewModelImpl()
+//        window?.rootViewController = RegisterationViewController(viewModel: viewModel)
+//        window?.makeKeyAndVisible()
+//    }
+//
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(windowScene: windowScene)
-        let viewModel = RegisterViewModelImpl()
-        window?.rootViewController = RegisterationViewController(viewModel: viewModel)
-        window?.makeKeyAndVisible()
+        if let windowScene = scene as? UIWindowScene {
+            self.window = UIWindow(windowScene: windowScene)
+            if let window = self.window {
+                router.setRoot(for: window)
+            }
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

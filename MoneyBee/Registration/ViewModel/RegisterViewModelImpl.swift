@@ -9,8 +9,15 @@ import Foundation
 import RxSwift
 import RxCocoa
 import UIKit
+import XCoordinator
 
 class RegisterViewModelImpl: RegisterViewModel {
+    
+    private let router: UnownedRouter<AppRoute>
+
+    init(router: UnownedRouter<AppRoute>) {
+        self.router = router
+    }
     
     var isValidFullUserData = PublishSubject<Bool>()
     

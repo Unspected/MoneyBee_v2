@@ -11,6 +11,7 @@ protocol LoginViewModel {
     var isValid: PassthroughSubject<Bool, Never> { get set }
     
     func authorization()
+    func signUpButtonPressed() 
     
     
 }

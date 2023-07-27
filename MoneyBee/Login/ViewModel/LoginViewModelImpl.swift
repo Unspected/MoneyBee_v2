@@ -5,9 +5,15 @@
 import Foundation
 import Combine
 import UIKit
+import XCoordinator
 
 class LoginViewModelImpl: LoginViewModel {
     
+    private let router: UnownedRouter<AppRoute>
+
+    init(router: UnownedRouter<AppRoute>) {
+        self.router = router
+    }
     
     let users = [UserModel(userName: "pasha", password: "123", email: ""),
                  UserModel(userName: "masha", password: "321", email: ""),
@@ -15,11 +21,6 @@ class LoginViewModelImpl: LoginViewModel {
                  UserModel(userName: "petya", password: "643", email: ""),
                  UserModel(userName: "admin", password: "1", email: "admin")
     ]
-    
-    
-    init() {
-    }
-    
     
     var cancellable = Set<AnyCancellable>()
     
@@ -47,5 +48,9 @@ class LoginViewModelImpl: LoginViewModel {
         }.cancel()
         
     }
+    
+    func signUpButtonPressed() {
+        router.trigger(.registration)
+       }
 
 }

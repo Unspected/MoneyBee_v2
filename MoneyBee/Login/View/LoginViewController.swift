@@ -117,9 +117,9 @@ class LoginViewController: UIViewController {
         
         
         createAccountButton.publisher(forEvent: .touchUpInside).sink { [weak self] _ in
-            let vc = RegisterationViewController(viewModel: RegisterViewModelImpl())
-            vc.modalPresentationStyle = .fullScreen
-            self?.present(vc, animated: true)
+            guard let self else { return }
+            viewModel.signUpButtonPressed()
+            
         }.store(in: &cancellable)
         
         
