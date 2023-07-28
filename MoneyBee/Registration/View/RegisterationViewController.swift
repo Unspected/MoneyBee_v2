@@ -123,49 +123,52 @@ class RegisterationViewController: UIViewController {
     }
     
     private func bind() {
-        usernameTextField.rx.text.debounce(.milliseconds(300), scheduler: MainScheduler.instance).subscribe { val in
+        usernameTextField.rx.text.subscribe { [weak self] val in
+            guard let self else { return }
             self.viewModel.usernamePublisher.onNext(val ?? "")
             self.usernameTextField.layer.borderWidth = 0
             self.usernameTextField.layer.borderColor = .none
         }.disposed(by: disposeBag)
         
-        emailTextField.rx.text.debounce(.milliseconds(300), scheduler: MainScheduler.instance).subscribe { val in
+        emailTextField.rx.text.subscribe { [weak self] val in
+            guard let self else { return }
             self.viewModel.emailPublisher.onNext(val ?? "")
             self.emailTextField.layer.borderWidth = 0
             self.emailTextField.layer.borderColor = .none
         }.disposed(by: disposeBag)
         
-        passwordTextField.rx.text.debounce(.milliseconds(300), scheduler: MainScheduler.instance).subscribe { val in
+        passwordTextField.rx.text.subscribe { [weak self] val in
+            guard let self else { return }
             self.viewModel.passwordPublisher.onNext(val ?? "")
             self.passwordTextField.layer.borderWidth = 0
             self.passwordTextField.layer.borderColor = .none
         }.disposed(by: disposeBag)
         
-        confirmPasswordTextField.rx.text.debounce(.milliseconds(300), scheduler: MainScheduler.instance).subscribe { val in
+        confirmPasswordTextField.rx.text.subscribe { [weak self] val in
+            guard let self else { return}
             self.viewModel.repeatPasswordPublisher.onNext( val ?? "")
             self.confirmPasswordTextField.layer.borderWidth = 0
             self.confirmPasswordTextField.layer.borderColor = .none
         }.disposed(by: disposeBag)
         
-        viewModel.validPassword.subscribe { [weak self] isValid in
-            if !isValid {
-                self?.simpleAlert(title: "Invalid Password", message: "Make sure password data is correct", buttonTitle: "try again")
-                self?.confirmPasswordTextField.layer.borderWidth = 1
-                self?.confirmPasswordTextField.layer.borderColor = UIColor.red.cgColor
-                self?.passwordTextField.layer.borderWidth = 1
-                self?.passwordTextField.layer.borderColor = UIColor.red.cgColor
-            }
+        viewModel.validPassword.filter { !$0 }.subscribe { [weak self] isValid in
+            guard let self else { return }
+            self.simpleAlert(title: "Invalid Password", message: "Make sure password data is correct", buttonTitle: "try again")
+            self.confirmPasswordTextField.layer.borderWidth = 1
+            self.confirmPasswordTextField.layer.borderColor = UIColor.red.cgColor
+            self.passwordTextField.layer.borderWidth = 1
+            self.passwordTextField.layer.borderColor = UIColor.red.cgColor
+            
         }.disposed(by: disposeBag)
         
-        viewModel.validUserData.subscribe { [weak self] isValid in
-            if !isValid {
-                self?.simpleAlert(title: "Invalid Username or Email", message: "Make sure your data in username or email is correct", buttonTitle: "try again")
-                self?.emailTextField.layer.borderWidth = 1
-                self?.emailTextField.layer.borderColor = UIColor.red.cgColor
-                self?.usernameTextField.layer.borderWidth = 1
-                self?.usernameTextField.layer.borderColor = UIColor.red.cgColor
+        viewModel.validUserData.filter { !$0}.subscribe { [weak self] isValid in
+             guard let self else { return }
+                self.simpleAlert(title: "Invalid Username or Email", message: "Make sure your data in username or email is correct", buttonTitle: "try again")
+                self.emailTextField.layer.borderWidth = 1
+                self.emailTextField.layer.borderColor = UIColor.red.cgColor
+                self.usernameTextField.layer.borderWidth = 1
+                self.usernameTextField.layer.borderColor = UIColor.red.cgColor
                 
-            }
         }.disposed(by: disposeBag)
         
         
@@ -179,12 +182,6 @@ class RegisterationViewController: UIViewController {
                 self.confirmPasswordTextField.text = ""
             }
         }.disposed(by: disposeBag)
-        
-//        viewModel.isValidFullUserData.subscribe{ [weak self] isValidData in
-//            if isValidData {
-//                self?.simpleAlert(title: "Success", message: "User successfully created", buttonTitle: "ok")
-//            }
-//        }.disposed(by: disposeBag)
         
         createAccountButton.rx.tap.subscribe { tap in
             self.viewModel.createNewUser()
