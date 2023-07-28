@@ -1,12 +1,30 @@
 {
   "pins" : [
     {
+      "identity" : "rxswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ReactiveX/RxSwift",
+      "state" : {
+        "revision" : "9dcaa4b333db437b0fbfaf453fad29069044a8b4",
+        "version" : "6.6.0"
+      }
+    },
+    {
       "identity" : "stevia",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/freshOS/Stevia",
       "state" : {
         "revision" : "cfb1a1d2159277bb553c3dc46f3f742c0275566d",
         "version" : "5.1.2"
+      }
+    },
+    {
+      "identity" : "xcoordinator",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/QuickBirdEng/XCoordinator",
+      "state" : {
+        "revision" : "00b066139ed0bf2f68549a7d87434ed36dfa6dea",
+        "version" : "2.2.1"
       }
     }
   ],

@@ -3,31 +3,13 @@ import UIKit
 import Stevia
 import Combine
 
-/*
-
-TO DO: - Inject view model implementation through initializer
-
-protocol LoginViewModel {
-
-    func login()
-}
-
-protocol DefaultLoginViewModel: LoginViewModel {
-
-    func login() {  }
-}
-
-*/
 
 class LoginViewController: UIViewController {
     
     private var viewModel: LoginViewModel!
     
-    var users: [UserModel] = []
-    
-    var cancellable = Set<AnyCancellable>()
+    private var cancellable = Set<AnyCancellable>()
 
-    
     init(viewModel: LoginViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -56,6 +38,7 @@ class LoginViewController: UIViewController {
         let textField = UITextField()
         textField.backgroundColor = .backgroundTextField
         textField.layer.cornerRadius = 10
+        textField.textColor = .whiteColor
         textField.autocapitalizationType = .none
         return textField
     }()
@@ -73,6 +56,7 @@ class LoginViewController: UIViewController {
         textField.backgroundColor = .backgroundTextField
         textField.layer.cornerRadius = 10
         textField.isSecureTextEntry = true
+        textField.textColor = .whiteColor
         textField.autocapitalizationType = .none
         return textField
     }()
@@ -81,18 +65,18 @@ class LoginViewController: UIViewController {
         let button = GradientButton()
         button.setTitle("Sign In", for: .normal)
         button.setTitleColor(UIColor.whiteColor, for: .normal)
-        button.layer.cornerRadius = 10
+      
         return button
     }()
     
     private let createAccountButton: UIButton = {
         let button = GradientButton()
-        button.setTitle("Create Account", for: .normal)
+        button.setTitle("Sign Up", for: .normal)
         button.setTitleColor(UIColor.whiteColor, for: .normal)
-        button.layer.cornerRadius = 10
-        button.translatesAutoresizingMaskIntoConstraints = false
+        
         return button
     }()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,7 +101,8 @@ class LoginViewController: UIViewController {
             guard let self else { return }
             print("trigger")
             if value {
-                self.present(BudgetViewController(), animated: true)
+                let viewModel = BudgetViewModelImpl()
+                self.present(BudgetViewController(viewModel: viewModel), animated: true)
                 
             } else {
                 simpleAlert(title: "Invalid Error", message: "Wrong login or password", buttonTitle: "try again")
@@ -129,6 +114,14 @@ class LoginViewController: UIViewController {
             print("BUTTON TAPPED")
             self.viewModel.authorization()
         }.store(in: &cancellable)
+        
+        
+        createAccountButton.publisher(forEvent: .touchUpInside).sink { [weak self] _ in
+            guard let self else { return }
+            viewModel.signUpButtonPressed()
+            
+        }.store(in: &cancellable)
+        
         
     }
     
@@ -143,12 +136,12 @@ class LoginViewController: UIViewController {
             passwordTextField
             signInButton
             createAccountButton
-            
         }
         
     }
     
     private func setupConstrains() {
+    
         view.layout {
             5%
             |-40-imageViewLogo-40-| ~ 200
@@ -170,22 +163,6 @@ class LoginViewController: UIViewController {
         
         
     }
-    
 
-}
-
-extension LoginViewController: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        
-  
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.goals.value.count
-    }
 }
 

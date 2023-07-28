@@ -5,10 +5,15 @@
 import Foundation
 import Combine
 import UIKit
+import XCoordinator
 
 class LoginViewModelImpl: LoginViewModel {
     
-    var goals = CurrentValueSubject<[GoalModel], Never>([])
+    private let router: UnownedRouter<AppRoute>
+
+    init(router: UnownedRouter<AppRoute>) {
+        self.router = router
+    }
     
     let users = [UserModel(userName: "pasha", password: "123", email: ""),
                  UserModel(userName: "masha", password: "321", email: ""),
@@ -16,29 +21,6 @@ class LoginViewModelImpl: LoginViewModel {
                  UserModel(userName: "petya", password: "643", email: ""),
                  UserModel(userName: "admin", password: "1", email: "admin")
     ]
-    
-    
-    func fetchUser(url: URL) {
-        URLSession.shared.dataTaskPublisher(for: url)
-            .tryMap() { element -> Data in
-                guard let httpResponse = element.response as? HTTPURLResponse,
-                    httpResponse.statusCode == 200 else {
-                        throw URLError(.badServerResponse)
-                    }
-                return element.data
-                }
-            .decode(type: [GoalModel].self, decoder: JSONDecoder())
-            .sink(receiveCompletion: { print ("Received completion: \($0).") },
-                  receiveValue: { [weak self] value in
-                self?.goals.value = value
-            })
-            .store(in: &cancellable)
-    }
-    
-    init() {
-        fetchUser(url: URL(string: "lalala")!)
-    }
-    
     
     var cancellable = Set<AnyCancellable>()
     
@@ -66,5 +48,9 @@ class LoginViewModelImpl: LoginViewModel {
         }.cancel()
         
     }
+    
+    func signUpButtonPressed() {
+        router.trigger(.registration)
+       }
 
 }

@@ -20,7 +20,7 @@ extension UIColor {
     
     // Gradient
     static let startColor = #colorLiteral(red: 0.3843137255, green: 0.7058823529, blue: 0.7764705882, alpha: 1)
-    static let endColor = #colorLiteral(red: 0.6039215686, green: 0.3843137255, blue: 0.7764705882, alpha: 1)
+    static let endColor = #colorLiteral(red: 0.3614305258, green: 0.2294520736, blue: 0.6396850944, alpha: 1)
     
     
     
