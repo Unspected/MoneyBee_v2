@@ -44,10 +44,10 @@ class BudgetViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    private var cells: [GoalModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupViews()
         setupConstrains()
         bind()
@@ -55,11 +55,15 @@ class BudgetViewController: UIViewController {
     
     private func bind() {
         
-        viewModel.goals.sink { _ in
-            self.tableView.reloadData()
+        viewModel.fetchGoals()
+            .map { $0 }
+            .receive(on: DispatchQueue.main)
+            .sink { [unowned self] goals in
+            self.cells = goals
+            tableView.reloadData()
         }.store(in: &cancellable)
+      
     }
-    
     
     private func setupViews() {
         view.backgroundColor = .darkGray
@@ -82,28 +86,25 @@ class BudgetViewController: UIViewController {
         headerView.layout {
             imageViewLogo.bottom(0).centerHorizontally().height(70)
         }
-        
         view.layout([
-            headerView.height(20%).left(0).right(0).top(0),
+            headerView.height(17%).left(0).right(0).top(0),
             10%,
             tableView.left(10).right(10).bottom(0)
         ])
-        
     }
     
 }
 
-
 extension BudgetViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.goals.value.count
+        return cells.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: BudgetTableViewCell.cellID, for: indexPath) as? BudgetTableViewCell else {
             return UITableViewCell()
         }
-        let goalItem = viewModel.goals.value[indexPath.row]
+        let goalItem = cells[indexPath.row]
         cell.cellConfigure(model: goalItem)
         cell.progressBar.changeTintColorProgressView()
         

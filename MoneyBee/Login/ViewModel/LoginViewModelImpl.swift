@@ -36,6 +36,7 @@ class LoginViewModelImpl: LoginViewModel {
                 if self.users.contains(where: { model in
                     model.userName == login && model.password == password
                 }) {
+                    self.router.trigger(.tabBar)
                     return true
                     
                 } else {

@@ -20,5 +20,6 @@ protocol RegisterViewModel {
     var validPassword: PublishSubject<Bool> { get}
     var validUserData: PublishSubject<Bool> { get }
     var isValidFullUserData: PublishSubject<Bool> { get }
-    func createNewUser() 
+    func createNewUser()
+    var users1: BehaviorRelay<UserModel?> { get }
 }
