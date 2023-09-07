@@ -1,10 +1,3 @@
-//
-//  AppCoordinator.swift
-//  MoneyBee
-//
-//  Created by Pavel Andreev on 7/26/23.
-//
-
 import UIKit
 import XCoordinator
 
@@ -13,6 +6,7 @@ import XCoordinator
 enum AppRoute: Route {
     case login
     case registration
+    case tabBar
     case dismiss
     case pop
 }
@@ -34,6 +28,9 @@ final class AppCoordinator: NavigationCoordinator<AppRoute> {
             let viewModel = RegisterViewModelImpl(router: unownedRouter)
             let viewController = RegisterationViewController(viewModel: viewModel)
             return .push(viewController)
+        case .tabBar:
+            let coordinator = CustomTabBarCoordinator().strongRouter
+            return .presentFullScreen(coordinator, animation: .none)
         case .dismiss:
             return .dismiss()
         case .pop:
@@ -41,27 +38,4 @@ final class AppCoordinator: NavigationCoordinator<AppRoute> {
         }
     }
     
-    //    override func prepareTransition(for route: AppRoute) -> NavigationTransition {
-    //        setupNavBar()
-    //
-    //        switch route {
-    //        case .onboarding:
-    //            let viewController = OnboardingVC.instantiateFromNib()
-    //            let viewModel = OnboardingViewModelImpl(router: unownedRouter)
-    //            viewController.bind(to: viewModel)
-    //            return .push(viewController)
-    //        case .auth:
-    //            let viewController = AuthSceneController.instantiateFromNib()
-    //            let viewModel = AuthViewModelImpl(router: unownedRouter)
-    //            viewController.bind(to: viewModel)
-    //            return .push(viewController)
-    //        case .home:
-    //            let coordinator = CustomTabBarCoordinator().strongRouter
-    //            return .presentFullScreen(coordinator, animation: .fade)
-    //        case .dismiss:
-    //            return .dismiss()
-    //        case .pop:
-    //            return .pop()
-    //        }
-    //    }
 }

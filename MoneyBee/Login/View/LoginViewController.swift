@@ -26,6 +26,13 @@ class LoginViewController: UIViewController {
         return imageView
     }()
     
+    private let backgroundImage: UIImageView = {
+        let image = UIImageView()
+        image.image = UIImage(named: "frontBackground")
+        image.contentMode = .scaleAspectFit
+       return image
+    }()
+    
     private let usernameLabel: UILabel = {
        let label = UILabel()
         label.text = "Username"
@@ -101,8 +108,8 @@ class LoginViewController: UIViewController {
             guard let self else { return }
             print("trigger")
             if value {
-                let viewModel = BudgetViewModelImpl()
-                self.present(BudgetViewController(viewModel: viewModel), animated: true)
+              //  let viewModel = BudgetViewModelImpl()
+              //  self.present(BudgetViewController(viewModel: viewModel), animated: true)
                 
             } else {
                 simpleAlert(title: "Invalid Error", message: "Wrong login or password", buttonTitle: "try again")
@@ -111,7 +118,6 @@ class LoginViewController: UIViewController {
         }.store(in: &cancellable)
 
         signInButton.publisher(forEvent: .touchUpInside).sink { _ in
-            print("BUTTON TAPPED")
             self.viewModel.authorization()
         }.store(in: &cancellable)
         
@@ -158,7 +164,6 @@ class LoginViewController: UIViewController {
             15%
             |-40-createAccountButton-40-| ~ 45
             10%
-         
         }
         
         

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD3634102AA9976000F7495F /* GoalsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD36340F2AA9976000F7495F /* GoalsCoordinator.swift */; };
+		DD3634122AA9984A00F7495F /* AddCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3634112AA9984A00F7495F /* AddCoordinator.swift */; };
+		DD3634142AA998F400F7495F /* AccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3634132AA998F400F7495F /* AccountCoordinator.swift */; };
+		DD9236A32A8AF514008FD572 /* BudgetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9236A22A8AF514008FD572 /* BudgetCoordinator.swift */; };
+		DD9236A52A8B19F0008FD572 /* Extension+Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9236A42A8B19F0008FD572 /* Extension+Transition.swift */; };
 		DDB1F63C2A67A7B00080A148 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DDB1F63B2A67A7B00080A148 /* RxCocoa */; };
 		DDB1F63E2A67A7B00080A148 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DDB1F63D2A67A7B00080A148 /* RxSwift */; };
 		DDB1F6402A67A7D30080A148 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB1F63F2A67A7D30080A148 /* RegisterViewModel.swift */; };
@@ -39,6 +44,28 @@
 		DDECF6D82A7210AF009094F2 /* XCoordinator in Frameworks */ = {isa = PBXBuildFile; productRef = DDECF6D72A7210AF009094F2 /* XCoordinator */; };
 		DDECF6DA2A7210AF009094F2 /* XCoordinatorCombine in Frameworks */ = {isa = PBXBuildFile; productRef = DDECF6D92A7210AF009094F2 /* XCoordinatorCombine */; };
 		DDECF6DC2A7210AF009094F2 /* XCoordinatorRx in Frameworks */ = {isa = PBXBuildFile; productRef = DDECF6DB2A7210AF009094F2 /* XCoordinatorRx */; };
+		DDECF6E02A77658B009094F2 /* CustomTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDECF6DF2A77658B009094F2 /* CustomTabBarCoordinator.swift */; };
+		DDECF6E52A7765DA009094F2 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDECF6E42A7765DA009094F2 /* DashboardViewController.swift */; };
+		DDECF6E72A7765EC009094F2 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDECF6E62A7765EC009094F2 /* DashboardViewModel.swift */; };
+		DDECF6E92A7765F7009094F2 /* DashboardViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDECF6E82A7765F7009094F2 /* DashboardViewModelImpl.swift */; };
+		DDECF6EE2A77662F009094F2 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDECF6ED2A77662F009094F2 /* GoalsViewController.swift */; };
+		DDECF6F02A77663A009094F2 /* GoalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDECF6EF2A77663A009094F2 /* GoalsViewModel.swift */; };
+		DDECF6F22A776644009094F2 /* GoalsViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDECF6F12A776644009094F2 /* GoalsViewModelImpl.swift */; };
+		DDECF6F72A7766A5009094F2 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDECF6F62A7766A5009094F2 /* AddViewController.swift */; };
+		DDECF6F92A7766B1009094F2 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDECF6F82A7766B1009094F2 /* AddViewModel.swift */; };
+		DDECF6FB2A7766BB009094F2 /* AddViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDECF6FA2A7766BB009094F2 /* AddViewModelImpl.swift */; };
+		DDECF7012A776A15009094F2 /* NewSavingGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDECF7002A776A15009094F2 /* NewSavingGoalViewController.swift */; };
+		DDECF7042A776A30009094F2 /* NewSavingGoalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDECF7032A776A30009094F2 /* NewSavingGoalModel.swift */; };
+		DDECF7062A776A3D009094F2 /* NewSavingGoalModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDECF7052A776A3D009094F2 /* NewSavingGoalModelImpl.swift */; };
+		DDECF7092A776AB9009094F2 /* NewCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDECF7082A776AB9009094F2 /* NewCategoryViewController.swift */; };
+		DDECF70C2A776ADD009094F2 /* NewCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDECF70B2A776ADD009094F2 /* NewCategoryViewModel.swift */; };
+		DDECF70E2A776B23009094F2 /* NewCategoryViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDECF70D2A776B23009094F2 /* NewCategoryViewModelImpl.swift */; };
+		DDECF7122A776BDD009094F2 /* NewTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDECF7112A776BDD009094F2 /* NewTransactionViewModel.swift */; };
+		DDECF7142A776BF7009094F2 /* NewTransactionViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDECF7132A776BF7009094F2 /* NewTransactionViewModelImpl.swift */; };
+		DDECF7192A776DEB009094F2 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDECF7182A776DEB009094F2 /* AccountViewController.swift */; };
+		DDECF71B2A776DF4009094F2 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDECF71A2A776DF4009094F2 /* AccountViewModel.swift */; };
+		DDECF71D2A776DFE009094F2 /* AccountViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDECF71C2A776DFE009094F2 /* AccountViewModelImpl.swift */; };
+		DDECF7202A777733009094F2 /* DashboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDECF71F2A777733009094F2 /* DashboardCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +82,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DD36340F2AA9976000F7495F /* GoalsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsCoordinator.swift; sourceTree = "<group>"; };
+		DD3634112AA9984A00F7495F /* AddCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoordinator.swift; sourceTree = "<group>"; };
+		DD3634132AA998F400F7495F /* AccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCoordinator.swift; sourceTree = "<group>"; };
+		DD9236A22A8AF514008FD572 /* BudgetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCoordinator.swift; sourceTree = "<group>"; };
+		DD9236A42A8B19F0008FD572 /* Extension+Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Transition.swift"; sourceTree = "<group>"; };
 		DDB1F63F2A67A7D30080A148 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		DDB1F6412A67A7E00080A148 /* RegisterViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModelImpl.swift; sourceTree = "<group>"; };
 		DDB1F6432A6A53840080A148 /* Extensions + String .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + String .swift"; sourceTree = "<group>"; };
@@ -84,6 +116,28 @@
 		DDDF641E2A64544800396F86 /* BudgetViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewModelImpl.swift; sourceTree = "<group>"; };
 		DDDF642B2A650F5800396F86 /* RegisterationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterationViewController.swift; sourceTree = "<group>"; };
 		DDECF6D42A721076009094F2 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		DDECF6DF2A77658B009094F2 /* CustomTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarCoordinator.swift; sourceTree = "<group>"; };
+		DDECF6E42A7765DA009094F2 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		DDECF6E62A7765EC009094F2 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		DDECF6E82A7765F7009094F2 /* DashboardViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModelImpl.swift; sourceTree = "<group>"; };
+		DDECF6ED2A77662F009094F2 /* GoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
+		DDECF6EF2A77663A009094F2 /* GoalsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewModel.swift; sourceTree = "<group>"; };
+		DDECF6F12A776644009094F2 /* GoalsViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewModelImpl.swift; sourceTree = "<group>"; };
+		DDECF6F62A7766A5009094F2 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		DDECF6F82A7766B1009094F2 /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
+		DDECF6FA2A7766BB009094F2 /* AddViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModelImpl.swift; sourceTree = "<group>"; };
+		DDECF7002A776A15009094F2 /* NewSavingGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSavingGoalViewController.swift; sourceTree = "<group>"; };
+		DDECF7032A776A30009094F2 /* NewSavingGoalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSavingGoalModel.swift; sourceTree = "<group>"; };
+		DDECF7052A776A3D009094F2 /* NewSavingGoalModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSavingGoalModelImpl.swift; sourceTree = "<group>"; };
+		DDECF7082A776AB9009094F2 /* NewCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCategoryViewController.swift; sourceTree = "<group>"; };
+		DDECF70B2A776ADD009094F2 /* NewCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCategoryViewModel.swift; sourceTree = "<group>"; };
+		DDECF70D2A776B23009094F2 /* NewCategoryViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCategoryViewModelImpl.swift; sourceTree = "<group>"; };
+		DDECF7112A776BDD009094F2 /* NewTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransactionViewModel.swift; sourceTree = "<group>"; };
+		DDECF7132A776BF7009094F2 /* NewTransactionViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransactionViewModelImpl.swift; sourceTree = "<group>"; };
+		DDECF7182A776DEB009094F2 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		DDECF71A2A776DF4009094F2 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		DDECF71C2A776DFE009094F2 /* AccountViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModelImpl.swift; sourceTree = "<group>"; };
+		DDECF71F2A777733009094F2 /* DashboardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,11 +185,11 @@
 		DDDF63DC2A644B1000396F86 /* MoneyBee */ = {
 			isa = PBXGroup;
 			children = (
+				DDECF71E2A776EB4009094F2 /* Menu */,
 				DDECF6D22A72105A009094F2 /* Navigation */,
 				DDDF64282A65055800396F86 /* Components */,
 				DDDF64032A644D5400396F86 /* Extensions */,
 				DDDF63F12A644B7C00396F86 /* Models */,
-				DDDF64042A644D7400396F86 /* Budget */,
 				DDDF64252A6462D100396F86 /* Registration */,
 				DDDF63F72A644C7E00396F86 /* Login */,
 				DDDF63F62A644BE500396F86 /* SystemFiles */,
@@ -202,6 +256,7 @@
 				DDDF64182A64512A00396F86 /* Extension + Alert.swift */,
 				DDDF641A2A64514C00396F86 /* Extension + Combine_TapButton.swift */,
 				DDB1F6432A6A53840080A148 /* Extensions + String .swift */,
+				DD9236A42A8B19F0008FD572 /* Extension+Transition.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -286,8 +341,210 @@
 			isa = PBXGroup;
 			children = (
 				DDECF6D42A721076009094F2 /* AppCoordinator.swift */,
+				DDECF6DF2A77658B009094F2 /* CustomTabBarCoordinator.swift */,
+				DDECF71F2A777733009094F2 /* DashboardCoordinator.swift */,
+				DD9236A22A8AF514008FD572 /* BudgetCoordinator.swift */,
+				DD36340F2AA9976000F7495F /* GoalsCoordinator.swift */,
+				DD3634112AA9984A00F7495F /* AddCoordinator.swift */,
+				DD3634132AA998F400F7495F /* AccountCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DDECF6E12A7765BD009094F2 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				DDECF6E32A7765CA009094F2 /* ViewModel */,
+				DDECF6E22A7765C4009094F2 /* View */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		DDECF6E22A7765C4009094F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DDECF6E42A7765DA009094F2 /* DashboardViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DDECF6E32A7765CA009094F2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DDECF6E62A7765EC009094F2 /* DashboardViewModel.swift */,
+				DDECF6E82A7765F7009094F2 /* DashboardViewModelImpl.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DDECF6EA2A776612009094F2 /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+				DDECF6EC2A776620009094F2 /* ViewModel */,
+				DDECF6EB2A77661C009094F2 /* View */,
+			);
+			path = Goals;
+			sourceTree = "<group>";
+		};
+		DDECF6EB2A77661C009094F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DDECF6ED2A77662F009094F2 /* GoalsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DDECF6EC2A776620009094F2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DDECF6EF2A77663A009094F2 /* GoalsViewModel.swift */,
+				DDECF6F12A776644009094F2 /* GoalsViewModelImpl.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DDECF6F32A776680009094F2 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				DDECF6FE2A7766E8009094F2 /* New Saving Goal */,
+				DDECF6FD2A7766DA009094F2 /* New Category */,
+				DDECF6FC2A7766C1009094F2 /* New Transaction */,
+				DDECF6F52A776692009094F2 /* ViewModel */,
+				DDECF6F42A77668D009094F2 /* View */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		DDECF6F42A77668D009094F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DDECF6F62A7766A5009094F2 /* AddViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DDECF6F52A776692009094F2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DDECF6F82A7766B1009094F2 /* AddViewModel.swift */,
+				DDECF6FA2A7766BB009094F2 /* AddViewModelImpl.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DDECF6FC2A7766C1009094F2 /* New Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				DDECF7102A776BCE009094F2 /* ViewModel */,
+				DDECF70F2A776BC9009094F2 /* View */,
+			);
+			path = "New Transaction";
+			sourceTree = "<group>";
+		};
+		DDECF6FD2A7766DA009094F2 /* New Category */ = {
+			isa = PBXGroup;
+			children = (
+				DDECF70A2A776ACC009094F2 /* ViewModel */,
+				DDECF7072A776AAA009094F2 /* View */,
+			);
+			path = "New Category";
+			sourceTree = "<group>";
+		};
+		DDECF6FE2A7766E8009094F2 /* New Saving Goal */ = {
+			isa = PBXGroup;
+			children = (
+				DDECF7022A776A1F009094F2 /* ViewModel */,
+				DDECF6FF2A7769FC009094F2 /* View */,
+			);
+			path = "New Saving Goal";
+			sourceTree = "<group>";
+		};
+		DDECF6FF2A7769FC009094F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DDECF7002A776A15009094F2 /* NewSavingGoalViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DDECF7022A776A1F009094F2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DDECF7032A776A30009094F2 /* NewSavingGoalModel.swift */,
+				DDECF7052A776A3D009094F2 /* NewSavingGoalModelImpl.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DDECF7072A776AAA009094F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DDECF7082A776AB9009094F2 /* NewCategoryViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DDECF70A2A776ACC009094F2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DDECF70B2A776ADD009094F2 /* NewCategoryViewModel.swift */,
+				DDECF70D2A776B23009094F2 /* NewCategoryViewModelImpl.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DDECF70F2A776BC9009094F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DDECF7102A776BCE009094F2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DDECF7112A776BDD009094F2 /* NewTransactionViewModel.swift */,
+				DDECF7132A776BF7009094F2 /* NewTransactionViewModelImpl.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DDECF7152A776DCE009094F2 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				DDECF7172A776DDE009094F2 /* ViewModel */,
+				DDECF7162A776DD9009094F2 /* View */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		DDECF7162A776DD9009094F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DDECF7182A776DEB009094F2 /* AccountViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DDECF7172A776DDE009094F2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DDECF71A2A776DF4009094F2 /* AccountViewModel.swift */,
+				DDECF71C2A776DFE009094F2 /* AccountViewModelImpl.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DDECF71E2A776EB4009094F2 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				DDDF64042A644D7400396F86 /* Budget */,
+				DDECF7152A776DCE009094F2 /* Account */,
+				DDECF6F32A776680009094F2 /* Add */,
+				DDECF6EA2A776612009094F2 /* Goals */,
+				DDECF6E12A7765BD009094F2 /* Dashboard */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,30 +631,57 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDECF7142A776BF7009094F2 /* NewTransactionViewModelImpl.swift in Sources */,
+				DDECF6F92A7766B1009094F2 /* AddViewModel.swift in Sources */,
+				DDECF7042A776A30009094F2 /* NewSavingGoalModel.swift in Sources */,
 				DDDF640D2A64503B00396F86 /* Extensions + Color.swift in Sources */,
 				DDDF641F2A64544800396F86 /* BudgetViewModelImpl.swift in Sources */,
 				DDB1F6442A6A53840080A148 /* Extensions + String .swift in Sources */,
+				DDECF7192A776DEB009094F2 /* AccountViewController.swift in Sources */,
+				DDECF6E72A7765EC009094F2 /* DashboardViewModel.swift in Sources */,
+				DD9236A52A8B19F0008FD572 /* Extension+Transition.swift in Sources */,
+				DDECF6E02A77658B009094F2 /* CustomTabBarCoordinator.swift in Sources */,
+				DDECF7122A776BDD009094F2 /* NewTransactionViewModel.swift in Sources */,
 				DDDF64152A6450F500396F86 /* Extensions + Combine_TextField.swift in Sources */,
 				DDDF641D2A64543B00396F86 /* BudgetViewModel.swift in Sources */,
+				DDECF7092A776AB9009094F2 /* NewCategoryViewController.swift in Sources */,
 				DDDF64172A64511300396F86 /* Extension + String.swift in Sources */,
+				DDECF6E52A7765DA009094F2 /* DashboardViewController.swift in Sources */,
+				DDECF7062A776A3D009094F2 /* NewSavingGoalModelImpl.swift in Sources */,
 				DDDF642C2A650F5800396F86 /* RegisterationViewController.swift in Sources */,
+				DD3634102AA9976000F7495F /* GoalsCoordinator.swift in Sources */,
 				DDDF63FB2A644CA100396F86 /* LoginViewController.swift in Sources */,
+				DDECF71D2A776DFE009094F2 /* AccountViewModelImpl.swift in Sources */,
+				DDECF70E2A776B23009094F2 /* NewCategoryViewModelImpl.swift in Sources */,
+				DDECF6F02A77663A009094F2 /* GoalsViewModel.swift in Sources */,
 				DDDF63FF2A644CBD00396F86 /* LoginViewModelImpl.swift in Sources */,
 				DDDF63DE2A644B1000396F86 /* AppDelegate.swift in Sources */,
+				DDECF6E92A7765F7009094F2 /* DashboardViewModelImpl.swift in Sources */,
 				DDDF641B2A64514C00396F86 /* Extension + Combine_TapButton.swift in Sources */,
 				DDDF64092A644DAE00396F86 /* BudgetViewController.swift in Sources */,
 				DDECF6D52A721076009094F2 /* AppCoordinator.swift in Sources */,
+				DD3634142AA998F400F7495F /* AccountCoordinator.swift in Sources */,
 				DDB1F6422A67A7E00080A148 /* RegisterViewModelImpl.swift in Sources */,
 				DDDF63F52A644BAF00396F86 /* GoalModel.swift in Sources */,
 				DDDF640B2A644DCF00396F86 /* BudgetTableViewCell.swift in Sources */,
 				DDDF64112A6450AF00396F86 /* Extension + UIButton.swift in Sources */,
 				DDDF64192A64512A00396F86 /* Extension + Alert.swift in Sources */,
+				DDECF7012A776A15009094F2 /* NewSavingGoalViewController.swift in Sources */,
 				DDDF640F2A64508600396F86 /* Extensions + HideKeyBoard.swift in Sources */,
+				DD3634122AA9984A00F7495F /* AddCoordinator.swift in Sources */,
 				DDB1F6402A67A7D30080A148 /* RegisterViewModel.swift in Sources */,
 				DDDF64132A6450D000396F86 /* Extension + UIProgressView.swift in Sources */,
+				DDECF70C2A776ADD009094F2 /* NewCategoryViewModel.swift in Sources */,
+				DDECF6F72A7766A5009094F2 /* AddViewController.swift in Sources */,
+				DDECF6EE2A77662F009094F2 /* GoalsViewController.swift in Sources */,
+				DD9236A32A8AF514008FD572 /* BudgetCoordinator.swift in Sources */,
+				DDECF71B2A776DF4009094F2 /* AccountViewModel.swift in Sources */,
 				DDDF63F32A644BA300396F86 /* UserModel.swift in Sources */,
 				DDDF63E02A644B1000396F86 /* SceneDelegate.swift in Sources */,
 				DDDF63FD2A644CB000396F86 /* LoginViewModel.swift in Sources */,
+				DDECF7202A777733009094F2 /* DashboardCoordinator.swift in Sources */,
+				DDECF6FB2A7766BB009094F2 /* AddViewModelImpl.swift in Sources */,
+				DDECF6F22A776644009094F2 /* GoalsViewModelImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

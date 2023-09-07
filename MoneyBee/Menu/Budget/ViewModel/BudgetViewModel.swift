@@ -10,7 +10,7 @@ import Combine
 
 protocol BudgetViewModel {
     
-    var goals: CurrentValueSubject<[GoalModel],Never> { get }
-    func fetchGoals()
+    var goals: PassthroughSubject<[GoalModel],Never> { get }
+    func fetchGoals()-> AnyPublisher<[GoalModel], Never> 
     
 }

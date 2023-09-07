@@ -11,6 +11,7 @@ import RxCocoa
 import UIKit
 import XCoordinator
 
+
 class RegisterViewModelImpl: RegisterViewModel {
     
     private let router: UnownedRouter<AppRoute>
@@ -37,6 +38,7 @@ class RegisterViewModelImpl: RegisterViewModel {
     
     var users = PublishSubject<UserModel>()
     
+    var users1: BehaviorRelay<UserModel?> = BehaviorRelay(value: nil)
     
     func createNewUser() {
         
