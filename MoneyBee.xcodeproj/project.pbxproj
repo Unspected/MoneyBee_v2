@@ -17,6 +17,7 @@
 		DDB1F6402A67A7D30080A148 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB1F63F2A67A7D30080A148 /* RegisterViewModel.swift */; };
 		DDB1F6422A67A7E00080A148 /* RegisterViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB1F6412A67A7E00080A148 /* RegisterViewModelImpl.swift */; };
 		DDB1F6442A6A53840080A148 /* Extensions + String .swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB1F6432A6A53840080A148 /* Extensions + String .swift */; };
+		DDDD78D32AAAEC91001B7232 /* Extensions + HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDD78D22AAAEC91001B7232 /* Extensions + HeaderView.swift */; };
 		DDDF63DE2A644B1000396F86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF63DD2A644B1000396F86 /* AppDelegate.swift */; };
 		DDDF63E02A644B1000396F86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF63DF2A644B1000396F86 /* SceneDelegate.swift */; };
 		DDDF63E72A644B1100396F86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDDF63E62A644B1100396F86 /* Assets.xcassets */; };
@@ -91,6 +92,7 @@
 		DDB1F6412A67A7E00080A148 /* RegisterViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModelImpl.swift; sourceTree = "<group>"; };
 		DDB1F6432A6A53840080A148 /* Extensions + String .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + String .swift"; sourceTree = "<group>"; };
 		DDB1F64B2A6CC8950080A148 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		DDDD78D22AAAEC91001B7232 /* Extensions + HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + HeaderView.swift"; sourceTree = "<group>"; };
 		DDDF63DA2A644B1000396F86 /* MoneyBee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyBee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDDF63DD2A644B1000396F86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDDF63DF2A644B1000396F86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 				DDDF641A2A64514C00396F86 /* Extension + Combine_TapButton.swift */,
 				DDB1F6432A6A53840080A148 /* Extensions + String .swift */,
 				DD9236A42A8B19F0008FD572 /* Extension+Transition.swift */,
+				DDDD78D22AAAEC91001B7232 /* Extensions + HeaderView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -634,6 +637,7 @@
 				DDECF7142A776BF7009094F2 /* NewTransactionViewModelImpl.swift in Sources */,
 				DDECF6F92A7766B1009094F2 /* AddViewModel.swift in Sources */,
 				DDECF7042A776A30009094F2 /* NewSavingGoalModel.swift in Sources */,
+				DDDD78D32AAAEC91001B7232 /* Extensions + HeaderView.swift in Sources */,
 				DDDF640D2A64503B00396F86 /* Extensions + Color.swift in Sources */,
 				DDDF641F2A64544800396F86 /* BudgetViewModelImpl.swift in Sources */,
 				DDB1F6442A6A53840080A148 /* Extensions + String .swift in Sources */,

@@ -96,11 +96,11 @@ private extension CustomTabBarCoordinator {
         apperance.configureWithOpaqueBackground()
         apperance.backgroundColor = UIColor.gray
         UITabBar.appearance().isTranslucent = false
-        UITabBar.appearance().unselectedItemTintColor = UIColor.gray
+        UITabBar.appearance().unselectedItemTintColor = .whiteColor
         UITabBar.appearance().backgroundColor = UIColor.green
         rootViewController.tabBar.standardAppearance = apperance
-        rootViewController.tabBar.tintColor = UIColor.lightGray
-        rootViewController.tabBar.backgroundColor = UIColor.red
+        rootViewController.tabBar.tintColor = .whiteColor
+        rootViewController.tabBar.backgroundColor = .tabBarColor
         rootViewController.tabBar.clipsToBounds = true
     }
 }
