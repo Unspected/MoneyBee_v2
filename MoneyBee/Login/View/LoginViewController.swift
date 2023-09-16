@@ -47,6 +47,7 @@ class LoginViewController: UIViewController {
         textField.layer.cornerRadius = 10
         textField.textColor = .whiteColor
         textField.autocapitalizationType = .none
+        textField.tintColor = .whiteColor
         return textField
     }()
     
@@ -65,6 +66,7 @@ class LoginViewController: UIViewController {
         textField.isSecureTextEntry = true
         textField.textColor = .whiteColor
         textField.autocapitalizationType = .none
+        textField.tintColor = .whiteColor
         return textField
     }()
     
