@@ -15,18 +15,18 @@ class BudgetViewController: UIViewController {
     
     private var cancellable = Set<AnyCancellable>()
     
-    private let headerView: UIView = {
-       let view = UIView()
-       view.backgroundColor = .gray
-       return view
-    }()
-    
-    private let imageViewLogo: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "logoHeader")
-        imageView.contentMode = .scaleAspectFit
-        return imageView
-    }()
+//    private let headerView: UIView = {
+//       let view = UIView()
+//       view.backgroundColor = .gray
+//       return view
+//    }()
+//
+//    private let imageViewLogo: UIImageView = {
+//        let imageView = UIImageView()
+//        imageView.image = UIImage(named: "logoHeader")
+//        imageView.contentMode = .scaleAspectFit
+//        return imageView
+//    }()
     
     private let tableView: UITableView = {
        let tableView = UITableView()
@@ -48,6 +48,7 @@ class BudgetViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupHeaderView()
         setupViews()
         setupConstrains()
         bind()
@@ -71,24 +72,15 @@ class BudgetViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(BudgetTableViewCell.self, forCellReuseIdentifier: BudgetTableViewCell.cellID)
         
-        headerView.subviews {
-            imageViewLogo
-        }
-        
         view.subviews {
-            headerView
             tableView
         }
         
     }
     
     private func setupConstrains() {
-        headerView.layout {
-            imageViewLogo.bottom(0).centerHorizontally().height(70)
-        }
         view.layout([
-            headerView.height(17%).left(0).right(0).top(0),
-            10%,
+            180,
             tableView.left(10).right(10).bottom(0)
         ])
     }

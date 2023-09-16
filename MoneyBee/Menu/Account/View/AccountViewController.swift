@@ -1,10 +1,4 @@
-//
-//  AccountViewController.swift
-//  MoneyBee
-//
-//  Created by Pavel Andreev on 7/30/23.
-//
-
+import Stevia
 import UIKit
 
 class AccountViewController: UIViewController {
@@ -22,7 +16,19 @@ class AccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupHeaderView()
+        setupViews()
+        setupConstrains()
+    }
 
+    // MARK: - Views
+    private func setupViews() {
+        view.backgroundColor = .darkGray
+  
+    }
+
+    // MARK: - Constrains
+    private func setupConstrains() {
     }
     
 
