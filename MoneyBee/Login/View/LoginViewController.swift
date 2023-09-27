@@ -48,6 +48,7 @@ class LoginViewController: UIViewController {
         textField.textColor = .whiteColor
         textField.autocapitalizationType = .none
         textField.tintColor = .whiteColor
+        textField.clearButtonMode = .whileEditing
         return textField
     }()
     
@@ -67,6 +68,7 @@ class LoginViewController: UIViewController {
         textField.textColor = .whiteColor
         textField.autocapitalizationType = .none
         textField.tintColor = .whiteColor
+        textField.clearButtonMode = .whileEditing
         return textField
     }()
     
@@ -74,7 +76,6 @@ class LoginViewController: UIViewController {
         let button = GradientButton()
         button.setTitle("Sign In", for: .normal)
         button.setTitleColor(UIColor.whiteColor, for: .normal)
-      
         return button
     }()
     

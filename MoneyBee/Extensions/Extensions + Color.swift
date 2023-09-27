@@ -1,10 +1,3 @@
-//
-//  Extensions + Color.swift
-//  MoneyBee
-//
-//  Created by Pavel Andreev on 7/16/23.
-//
-
 import UIKit
 
 extension UIColor {
@@ -22,7 +15,4 @@ extension UIColor {
     static let startColor = #colorLiteral(red: 0.3843137255, green: 0.7058823529, blue: 0.7764705882, alpha: 1)
     static let endColor = #colorLiteral(red: 0.3614305258, green: 0.2294520736, blue: 0.6396850944, alpha: 1)
     
-    
-    
-
 }

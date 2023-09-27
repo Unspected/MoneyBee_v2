@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD0391622AB81B0E00FBA3C9 /* Extensions + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0391612AB81B0E00FBA3C9 /* Extensions + UIView.swift */; };
 		DD0AE1142AB5795300766EFA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD0AE1132AB5795300766EFA /* GoogleService-Info.plist */; };
 		DD0AE11C2AB57DA700766EFA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DD0AE11B2AB57DA700766EFA /* FirebaseAuth */; };
 		DD0AE11E2AB57DA700766EFA /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = DD0AE11D2AB57DA700766EFA /* FirebaseDatabase */; };
@@ -15,9 +16,13 @@
 		DD0AE1242AB57DA700766EFA /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DD0AE1232AB57DA700766EFA /* FirebaseStorage */; };
 		DD0AE1272AB581B300766EFA /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0AE1262AB581B300766EFA /* AuthService.swift */; };
 		DD0AE1292AB5849A00766EFA /* RegisterUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0AE1282AB5849A00766EFA /* RegisterUserModel.swift */; };
+		DD1C5C242ABC016A0014E75A /* Extensions + Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1C5C232ABC016A0014E75A /* Extensions + Label.swift */; };
 		DD3634102AA9976000F7495F /* GoalsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD36340F2AA9976000F7495F /* GoalsCoordinator.swift */; };
 		DD3634122AA9984A00F7495F /* AddCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3634112AA9984A00F7495F /* AddCoordinator.swift */; };
 		DD3634142AA998F400F7495F /* AccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3634132AA998F400F7495F /* AccountCoordinator.swift */; };
+		DD7CCB6E2AC3CFBB00877F65 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7CCB6D2AC3CFBB00877F65 /* ProfileView.swift */; };
+		DD7CCB702AC3CFD100877F65 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7CCB6F2AC3CFD100877F65 /* ProfileViewModel.swift */; };
+		DD7CCB722AC3D7B500877F65 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7CCB712AC3D7B500877F65 /* ProfileModel.swift */; };
 		DD9236A32A8AF514008FD572 /* BudgetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9236A22A8AF514008FD572 /* BudgetCoordinator.swift */; };
 		DD9236A52A8B19F0008FD572 /* Extension+Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9236A42A8B19F0008FD572 /* Extension+Transition.swift */; };
 		DDB1F63C2A67A7B00080A148 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DDB1F63B2A67A7B00080A148 /* RxCocoa */; };
@@ -91,12 +96,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DD0391612AB81B0E00FBA3C9 /* Extensions + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + UIView.swift"; sourceTree = "<group>"; };
 		DD0AE1132AB5795300766EFA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DD0AE1262AB581B300766EFA /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		DD0AE1282AB5849A00766EFA /* RegisterUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserModel.swift; sourceTree = "<group>"; };
+		DD1C5C232ABC016A0014E75A /* Extensions + Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + Label.swift"; sourceTree = "<group>"; };
 		DD36340F2AA9976000F7495F /* GoalsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsCoordinator.swift; sourceTree = "<group>"; };
 		DD3634112AA9984A00F7495F /* AddCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoordinator.swift; sourceTree = "<group>"; };
 		DD3634132AA998F400F7495F /* AccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCoordinator.swift; sourceTree = "<group>"; };
+		DD7CCB6D2AC3CFBB00877F65 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		DD7CCB6F2AC3CFD100877F65 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		DD7CCB712AC3D7B500877F65 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		DD9236A22A8AF514008FD572 /* BudgetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCoordinator.swift; sourceTree = "<group>"; };
 		DD9236A42A8B19F0008FD572 /* Extension+Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Transition.swift"; sourceTree = "<group>"; };
 		DDB1F63F2A67A7D30080A148 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -183,6 +193,15 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		DD7CCB6C2AC3CFAA00877F65 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				DD7CCB6D2AC3CFBB00877F65 /* ProfileView.swift */,
+				DD7CCB6F2AC3CFD100877F65 /* ProfileViewModel.swift */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
 		DDB1F64A2A6CC8950080A148 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +252,7 @@
 				DDDF63F22A644BA300396F86 /* UserModel.swift */,
 				DDDF63F42A644BAF00396F86 /* GoalModel.swift */,
 				DD0AE1282AB5849A00766EFA /* RegisterUserModel.swift */,
+				DD7CCB712AC3D7B500877F65 /* ProfileModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -286,6 +306,8 @@
 				DDB1F6432A6A53840080A148 /* Extensions + String .swift */,
 				DD9236A42A8B19F0008FD572 /* Extension+Transition.swift */,
 				DDDD78D22AAAEC91001B7232 /* Extensions + HeaderView.swift */,
+				DD0391612AB81B0E00FBA3C9 /* Extensions + UIView.swift */,
+				DD1C5C232ABC016A0014E75A /* Extensions + Label.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -544,6 +566,7 @@
 			isa = PBXGroup;
 			children = (
 				DDECF7182A776DEB009094F2 /* AccountViewController.swift */,
+				DD7CCB6C2AC3CFAA00877F65 /* ProfileView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -662,10 +685,12 @@
 			files = (
 				DDECF7142A776BF7009094F2 /* NewTransactionViewModelImpl.swift in Sources */,
 				DD0AE1292AB5849A00766EFA /* RegisterUserModel.swift in Sources */,
+				DD7CCB702AC3CFD100877F65 /* ProfileViewModel.swift in Sources */,
 				DDECF6F92A7766B1009094F2 /* AddViewModel.swift in Sources */,
 				DDECF7042A776A30009094F2 /* NewSavingGoalModel.swift in Sources */,
 				DDDD78D32AAAEC91001B7232 /* Extensions + HeaderView.swift in Sources */,
 				DDDF640D2A64503B00396F86 /* Extensions + Color.swift in Sources */,
+				DD0391622AB81B0E00FBA3C9 /* Extensions + UIView.swift in Sources */,
 				DDDF641F2A64544800396F86 /* BudgetViewModelImpl.swift in Sources */,
 				DDB1F6442A6A53840080A148 /* Extensions + String .swift in Sources */,
 				DDECF7192A776DEB009094F2 /* AccountViewController.swift in Sources */,
@@ -675,6 +700,7 @@
 				DDECF7122A776BDD009094F2 /* NewTransactionViewModel.swift in Sources */,
 				DDDF64152A6450F500396F86 /* Extensions + Combine_TextField.swift in Sources */,
 				DDDF641D2A64543B00396F86 /* BudgetViewModel.swift in Sources */,
+				DD7CCB6E2AC3CFBB00877F65 /* ProfileView.swift in Sources */,
 				DDECF7092A776AB9009094F2 /* NewCategoryViewController.swift in Sources */,
 				DDDF64172A64511300396F86 /* Extension + String.swift in Sources */,
 				DDECF6E52A7765DA009094F2 /* DashboardViewController.swift in Sources */,
@@ -691,6 +717,7 @@
 				DDECF6E92A7765F7009094F2 /* DashboardViewModelImpl.swift in Sources */,
 				DDDF641B2A64514C00396F86 /* Extension + Combine_TapButton.swift in Sources */,
 				DDDF64092A644DAE00396F86 /* BudgetViewController.swift in Sources */,
+				DD7CCB722AC3D7B500877F65 /* ProfileModel.swift in Sources */,
 				DDECF6D52A721076009094F2 /* AppCoordinator.swift in Sources */,
 				DD3634142AA998F400F7495F /* AccountCoordinator.swift in Sources */,
 				DDB1F6422A67A7E00080A148 /* RegisterViewModelImpl.swift in Sources */,
@@ -705,6 +732,7 @@
 				DDDF64132A6450D000396F86 /* Extension + UIProgressView.swift in Sources */,
 				DDECF70C2A776ADD009094F2 /* NewCategoryViewModel.swift in Sources */,
 				DDECF6F72A7766A5009094F2 /* AddViewController.swift in Sources */,
+				DD1C5C242ABC016A0014E75A /* Extensions + Label.swift in Sources */,
 				DDECF6EE2A77662F009094F2 /* GoalsViewController.swift in Sources */,
 				DD9236A32A8AF514008FD572 /* BudgetCoordinator.swift in Sources */,
 				DDECF71B2A776DF4009094F2 /* AccountViewModel.swift in Sources */,
