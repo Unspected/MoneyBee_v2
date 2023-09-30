@@ -9,8 +9,8 @@
 
 
 <h2> Budget view</h2>
-<a>https://www.figma.com/file/P7lH1UJJOItrrtmrkiVokQ/Untitled?type=design&node-id=0%3A1&mode=design&t=9Z5dOM3H4r8HO9T5-1</a>
 
+[Figma](https://www.figma.com/file/P7lH1UJJOItrrtmrkiVokQ/Untitled?type=design&node-id=0%3A1&mode=design&t=9Z5dOM3H4r8HO9T5-1)
 <img width="288" alt="Снимок экрана 2023-09-28 в 10 52 52 PM" src="https://github.com/Unspected/MoneyBee_v2/assets/30178659/c3173b80-0641-4a83-9ec0-232c8f0b74c4">
 <img width="192" alt="Снимок экрана 2023-09-30 в 11 20 23 AM" src="https://github.com/Unspected/MoneyBee_v2/assets/30178659/b00a5237-41da-4c83-b6c3-16486f493d99">
 <img width="208" alt="Снимок экрана 2023-09-30 в 11 20 28 AM" src="https://github.com/Unspected/MoneyBee_v2/assets/30178659/0dd5627c-b619-4ddd-84be-47a8ea780944">
