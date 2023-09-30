@@ -20,6 +20,7 @@
 		DD3634102AA9976000F7495F /* GoalsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD36340F2AA9976000F7495F /* GoalsCoordinator.swift */; };
 		DD3634122AA9984A00F7495F /* AddCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3634112AA9984A00F7495F /* AddCoordinator.swift */; };
 		DD3634142AA998F400F7495F /* AccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3634132AA998F400F7495F /* AccountCoordinator.swift */; };
+		DD5D42052AC88DEE00FF3581 /* GoalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5D42042AC88DEE00FF3581 /* GoalCollectionViewCell.swift */; };
 		DD7CCB6E2AC3CFBB00877F65 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7CCB6D2AC3CFBB00877F65 /* ProfileView.swift */; };
 		DD7CCB702AC3CFD100877F65 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7CCB6F2AC3CFD100877F65 /* ProfileViewModel.swift */; };
 		DD7CCB722AC3D7B500877F65 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7CCB712AC3D7B500877F65 /* ProfileModel.swift */; };
@@ -104,6 +105,7 @@
 		DD36340F2AA9976000F7495F /* GoalsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsCoordinator.swift; sourceTree = "<group>"; };
 		DD3634112AA9984A00F7495F /* AddCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoordinator.swift; sourceTree = "<group>"; };
 		DD3634132AA998F400F7495F /* AccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCoordinator.swift; sourceTree = "<group>"; };
+		DD5D42042AC88DEE00FF3581 /* GoalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCollectionViewCell.swift; sourceTree = "<group>"; };
 		DD7CCB6D2AC3CFBB00877F65 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		DD7CCB6F2AC3CFD100877F65 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		DD7CCB712AC3D7B500877F65 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
@@ -191,6 +193,14 @@
 				DD0AE1262AB581B300766EFA /* AuthService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		DD5D42032AC88DC900FF3581 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DD5D42042AC88DEE00FF3581 /* GoalCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		DD7CCB6C2AC3CFAA00877F65 /* ProfileView */ = {
@@ -424,8 +434,9 @@
 		DDECF6EA2A776612009094F2 /* Goals */ = {
 			isa = PBXGroup;
 			children = (
-				DDECF6EC2A776620009094F2 /* ViewModel */,
+				DD5D42032AC88DC900FF3581 /* Cell */,
 				DDECF6EB2A77661C009094F2 /* View */,
+				DDECF6EC2A776620009094F2 /* ViewModel */,
 			);
 			path = Goals;
 			sourceTree = "<group>";
@@ -708,6 +719,7 @@
 				DDDF642C2A650F5800396F86 /* RegisterationViewController.swift in Sources */,
 				DD0AE1272AB581B300766EFA /* AuthService.swift in Sources */,
 				DD3634102AA9976000F7495F /* GoalsCoordinator.swift in Sources */,
+				DD5D42052AC88DEE00FF3581 /* GoalCollectionViewCell.swift in Sources */,
 				DDDF63FB2A644CA100396F86 /* LoginViewController.swift in Sources */,
 				DDECF71D2A776DFE009094F2 /* AccountViewModelImpl.swift in Sources */,
 				DDECF70E2A776B23009094F2 /* NewCategoryViewModelImpl.swift in Sources */,

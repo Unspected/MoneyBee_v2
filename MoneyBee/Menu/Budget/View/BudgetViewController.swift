@@ -1,9 +1,3 @@
-//
-//  BudgetViewController.swift
-//  MoneyBee
-//
-//  Created by Pavel Andreev on 7/16/23.
-//
 
 import UIKit
 import Stevia
@@ -16,6 +10,13 @@ class BudgetViewController: UIViewController {
     private var cancellable = Set<AnyCancellable>()
     
     private var category = PassthroughSubject<String, Never>()
+    
+    private var createNewCategory: UIButton = {
+       let button = UIButton()
+        button.setTitle("Create new Budget", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
     
     private let tableView: UITableView = {
         let tableView = UITableView()

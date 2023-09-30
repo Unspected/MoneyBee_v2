@@ -7,19 +7,21 @@ struct ProfileView: View {
     
     var body: some View {
         VStack {
-            if viewModel.isEditProfile {
+            if !viewModel.isEditProfile {
                 headerProfileView()
                 DefaultLabel(
                     label: "Name",
-                    labelValue: "\(viewModel.profile?.firstName ?? " " ) \(viewModel.profile?.lastName ?? "uknown")")
-                DefaultLabel(label: "Email", labelValue: viewModel.profile?.email ?? "unknown")
-                DefaultLabel(label: "Phone", labelValue: viewModel.profile?.phone ?? "unknown")
+                    labelValue: viewModel.firstName + " " + viewModel.lastName)
+                DefaultLabel(label: "Email", labelValue: viewModel.email)
+                DefaultLabel(label: "Phone", labelValue: viewModel.phone)
             } else {
+                editTextField(textValue: $viewModel.firstName, trackText: viewModel.firstName.isEmpty, placeHolder: "First Name")
                 
             }
         }
+        .padding()
         .foregroundColor(Color(.whiteColor))
-        .background(Color(.darkGray))
+        .background(Color(.tabBarColor))
     }
     
     @ViewBuilder
@@ -74,5 +76,11 @@ struct ProfileView: View {
 }
 
 #Preview {
-    ProfileView().environmentObject(ProfileViewModel())
+    ProfileView().environmentObject(ProfileViewModel(
+        profile:
+           ProfileModel(
+            firstName: "Pavel",
+            lastName: "Andreev",
+            email: "pavel@gmail.com",
+            phone:  "209-922-2138")))
 }
