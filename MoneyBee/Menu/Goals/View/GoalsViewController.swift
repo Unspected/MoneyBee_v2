@@ -5,12 +5,6 @@ class GoalsViewController: UIViewController {
     
     private var viewModel: GoalsViewModel!
     
-    private let headerView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .tabBarColor
-        return view
-    }()
-    
     private let imageViewLogo: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "header_logo")
@@ -22,6 +16,7 @@ class GoalsViewController: UIViewController {
         super.viewDidLoad()
         setupViews()
         setupConstrains()
+        setupHeaderView()
 
     }
     
@@ -37,25 +32,16 @@ class GoalsViewController: UIViewController {
     // MARK: - Views
     private func setupViews() {
         view.backgroundColor = .darkGray
-        headerView.subviews {
-            imageViewLogo
-        }
         
         view.subviews {
-            headerView
+
             
         }
     }
     
     // MARK: - Constrains
     private func setupConstrains() {
-        headerView.layout {
-            imageViewLogo.bottom(0).centerHorizontally().height(70)
-        }
         
-        view.layout([
-            headerView.height(15%).left(0).right(0).top(0),
-        ])
     }
     
 

@@ -1,12 +1,6 @@
-//
-//  AppDelegate.swift
-//  MoneyBee
-//
-//  Created by Pavel Andreev on 7/16/23.
-//
-
 import UIKit
 import XCoordinator
+import FirebaseCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +9,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let router = AppCoordinator().strongRouter
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        FirebaseApp.configure()
         router.setRoot(for: window)
         return true
     }

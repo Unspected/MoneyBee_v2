@@ -1,15 +1,10 @@
-//
-//  BudgetViewModelImpl.swift
-//  MoneyBee
-//
-//  Created by Pavel Andreev on 7/16/23.
-//
 
 import Foundation
 import Combine
 import XCoordinator
 
 class BudgetViewModelImpl: BudgetViewModel {
+    
     func fetchGoals() -> AnyPublisher<[GoalModel], Never> {
         let fetchGoals = [GoalModel(type: Category(name: "food"), goalName: "restaraunt", budgetAmount: 250, currentCosts: 200),
                                   GoalModel(type: Category(name: "food"), goalName: "whole foods", budgetAmount: 1000, currentCosts: 100),
@@ -17,7 +12,6 @@ class BudgetViewModelImpl: BudgetViewModel {
                           GoalModel(type: Category(name: "bills"), goalName: "utilities", budgetAmount: 50, currentCosts: 10)]
         return Just(fetchGoals).eraseToAnyPublisher()
     }
-    
     
     var goals = PassthroughSubject<[GoalModel], Never>()
     
@@ -27,4 +21,7 @@ class BudgetViewModelImpl: BudgetViewModel {
         self.router = router
     }
     
+    func createNewBudget() {
+     //   router.trigger(.create_new_budget)
+    }
 }

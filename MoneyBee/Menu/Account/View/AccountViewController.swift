@@ -5,6 +5,12 @@ class AccountViewController: UIViewController {
     
     private var viewModel: AccountViewModel!
     
+    private let profileView: UIView = {
+       let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     init(viewModel: AccountViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -29,6 +35,7 @@ class AccountViewController: UIViewController {
 
     // MARK: - Constrains
     private func setupConstrains() {
+        
     }
     
 

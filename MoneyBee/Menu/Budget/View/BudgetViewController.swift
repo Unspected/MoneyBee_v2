@@ -1,9 +1,3 @@
-//
-//  BudgetViewController.swift
-//  MoneyBee
-//
-//  Created by Pavel Andreev on 7/16/23.
-//
 
 import UIKit
 import Stevia
@@ -15,25 +9,21 @@ class BudgetViewController: UIViewController {
     
     private var cancellable = Set<AnyCancellable>()
     
-//    private let headerView: UIView = {
-//       let view = UIView()
-//       view.backgroundColor = .gray
-//       return view
-//    }()
-//
-//    private let imageViewLogo: UIImageView = {
-//        let imageView = UIImageView()
-//        imageView.image = UIImage(named: "logoHeader")
-//        imageView.contentMode = .scaleAspectFit
-//        return imageView
-//    }()
+    private var category = PassthroughSubject<String, Never>()
+    
+    private var createNewCategory: UIButton = {
+       let button = UIButton()
+        button.setTitle("Create new Budget", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
     
     private let tableView: UITableView = {
-       let tableView = UITableView()
+        let tableView = UITableView()
         tableView.backgroundColor = .clear
         return tableView
     }()
-
+    
     
     init(viewModel: BudgetViewModel) {
         self.viewModel = viewModel
@@ -60,10 +50,11 @@ class BudgetViewController: UIViewController {
             .map { $0 }
             .receive(on: DispatchQueue.main)
             .sink { [unowned self] goals in
-            self.cells = goals
-            tableView.reloadData()
-        }.store(in: &cancellable)
-      
+                self.cells = goals
+                tableView.reloadData()
+            }.store(in: &cancellable)
+        
+        
     }
     
     private func setupViews() {
@@ -97,18 +88,34 @@ extension BudgetViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         let goalItem = cells[indexPath.row]
+        category.send(goalItem.type.name)
         cell.cellConfigure(model: goalItem)
         cell.progressBar.changeTintColorProgressView()
-        
+        cell.selectionStyle = .none
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: view.frame.size.width / 2, height: 30))
+        let label = UILabel()
+        label.frame = CGRect(x: 10, y: 1, width: view.frame.size.width / 2, height: 30)
+        label.text = "Notification"
+        label.font = .systemFont(ofSize: 16)
+        label.textColor = .whiteColor
+        headerView.addSubview(label)
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+            return 30
+        }
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
     
-  
+    
     
     
 }

@@ -27,7 +27,7 @@ extension UIViewController {
         
         // Constrains
         headerView.layout {
-            imageViewLogo.bottom(0).centerHorizontally().height(70)
+            imageViewLogo.bottom(0).centerHorizontally().width(200).height(70)
         }
         view.layout([
             headerView.height(15%).left(0).right(0).top(0),
