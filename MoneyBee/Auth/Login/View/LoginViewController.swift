@@ -4,6 +4,8 @@ import Stevia
 import Combine
 
 
+
+
 class LoginViewController: UIViewController {
     
     private var viewModel: LoginViewModel!
@@ -98,39 +100,24 @@ class LoginViewController: UIViewController {
     }
     
     func bind() {
-        
-        loginTextField.publisher(for: \.text).sink { [weak self] text in
-            self?.viewModel.loginValue.value = text ?? ""
-        }.store(in: &cancellable)
-        
-        passwordTextField.textPublisher.sink { [weak self] val in
-            self?.viewModel.passwordValue.value = val
-        }.store(in: &cancellable)
-        
-        viewModel.isValid.sink { [weak self] value in
-            guard let self else { return }
-            print("trigger")
-            if value {
-              //  let viewModel = BudgetViewModelImpl()
-              //  self.present(BudgetViewController(viewModel: viewModel), animated: true)
-                
-            } else {
-                simpleAlert(title: "Invalid Error", message: "Wrong login or password", buttonTitle: "try again")
-               
+        signInButton.publisher(forEvent: .touchUpInside).sink { [weak self] _ in
+            guard
+                let userName = self?.loginTextField.text,
+                let password = self?.passwordTextField.text
+            else {
+                return
             }
-        }.store(in: &cancellable)
-
-        signInButton.publisher(forEvent: .touchUpInside).sink { _ in
-            self.viewModel.authorization()
+            self?.viewModel.signIn(login: userName, password: password)
         }.store(in: &cancellable)
         
+        viewModel.error.sink(receiveValue: { [weak self] error in
+            self?.updateErrorView(error: error)
+        }).store(in: &cancellable)
         
         createAccountButton.publisher(forEvent: .touchUpInside).sink { [weak self] _ in
             guard let self else { return }
-            viewModel.signUpButtonPressed()
             
         }.store(in: &cancellable)
-        
         
     }
     
@@ -146,7 +133,6 @@ class LoginViewController: UIViewController {
             signInButton
             createAccountButton
         }
-        
     }
     
     private func setupConstrains() {
@@ -170,6 +156,12 @@ class LoginViewController: UIViewController {
         }
         
         
+    }
+    
+    private func updateErrorView(error: LoginViewError?) {
+        if let error {
+            simpleAlert(title: "Error", message: error.localizedDescription, buttonTitle: "try again")
+        }
     }
 
 }

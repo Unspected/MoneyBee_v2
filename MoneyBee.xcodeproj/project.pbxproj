@@ -26,11 +26,15 @@
 		DD7CCB722AC3D7B500877F65 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7CCB712AC3D7B500877F65 /* ProfileModel.swift */; };
 		DD9236A32A8AF514008FD572 /* BudgetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9236A22A8AF514008FD572 /* BudgetCoordinator.swift */; };
 		DD9236A52A8B19F0008FD572 /* Extension+Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9236A42A8B19F0008FD572 /* Extension+Transition.swift */; };
+		DD9D4FE92AC8B5D2004A6CDE /* NewBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9D4FE82AC8B5D2004A6CDE /* NewBudgetView.swift */; };
+		DD9D4FEB2AC8B5F0004A6CDE /* NewBudgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9D4FEA2AC8B5F0004A6CDE /* NewBudgetViewModel.swift */; };
 		DDB1F63C2A67A7B00080A148 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DDB1F63B2A67A7B00080A148 /* RxCocoa */; };
 		DDB1F63E2A67A7B00080A148 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DDB1F63D2A67A7B00080A148 /* RxSwift */; };
 		DDB1F6402A67A7D30080A148 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB1F63F2A67A7D30080A148 /* RegisterViewModel.swift */; };
 		DDB1F6422A67A7E00080A148 /* RegisterViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB1F6412A67A7E00080A148 /* RegisterViewModelImpl.swift */; };
 		DDB1F6442A6A53840080A148 /* Extensions + String .swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB1F6432A6A53840080A148 /* Extensions + String .swift */; };
+		DDB70CA82ACA6FDF00B25C5F /* MoneyBeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB70CA72ACA6FDF00B25C5F /* MoneyBeeTests.swift */; };
+		DDB70CB02ACA707C00B25C5F /* LoginViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB70CAF2ACA707C00B25C5F /* LoginViewTests.swift */; };
 		DDDD78D32AAAEC91001B7232 /* Extensions + HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDD78D22AAAEC91001B7232 /* Extensions + HeaderView.swift */; };
 		DDDF63DE2A644B1000396F86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF63DD2A644B1000396F86 /* AppDelegate.swift */; };
 		DDDF63E02A644B1000396F86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF63DF2A644B1000396F86 /* SceneDelegate.swift */; };
@@ -83,6 +87,16 @@
 		DDECF7202A777733009094F2 /* DashboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDECF71F2A777733009094F2 /* DashboardCoordinator.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DDB70CA92ACA6FDF00B25C5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDDF63D22A644B1000396F86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDDF63D92A644B1000396F86;
+			remoteInfo = MoneyBee;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		DDB1F65A2A6CC8950080A148 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -111,10 +125,15 @@
 		DD7CCB712AC3D7B500877F65 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		DD9236A22A8AF514008FD572 /* BudgetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCoordinator.swift; sourceTree = "<group>"; };
 		DD9236A42A8B19F0008FD572 /* Extension+Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Transition.swift"; sourceTree = "<group>"; };
+		DD9D4FE82AC8B5D2004A6CDE /* NewBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBudgetView.swift; sourceTree = "<group>"; };
+		DD9D4FEA2AC8B5F0004A6CDE /* NewBudgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBudgetViewModel.swift; sourceTree = "<group>"; };
 		DDB1F63F2A67A7D30080A148 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		DDB1F6412A67A7E00080A148 /* RegisterViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModelImpl.swift; sourceTree = "<group>"; };
 		DDB1F6432A6A53840080A148 /* Extensions + String .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + String .swift"; sourceTree = "<group>"; };
 		DDB1F64B2A6CC8950080A148 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		DDB70CA52ACA6FDF00B25C5F /* MoneyBeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyBeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDB70CA72ACA6FDF00B25C5F /* MoneyBeeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyBeeTests.swift; sourceTree = "<group>"; };
+		DDB70CAF2ACA707C00B25C5F /* LoginViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewTests.swift; sourceTree = "<group>"; };
 		DDDD78D22AAAEC91001B7232 /* Extensions + HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + HeaderView.swift"; sourceTree = "<group>"; };
 		DDDF63DA2A644B1000396F86 /* MoneyBee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyBee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDDF63DD2A644B1000396F86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +185,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DDB70CA22ACA6FDF00B25C5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DDDF63D72A644B1000396F86 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -212,6 +238,31 @@
 			path = ProfileView;
 			sourceTree = "<group>";
 		};
+		DD9D4FE52AC8B57A004A6CDE /* NewBudget */ = {
+			isa = PBXGroup;
+			children = (
+				DD9D4FE62AC8B592004A6CDE /* View */,
+				DD9D4FE72AC8B598004A6CDE /* ViewModel */,
+			);
+			path = NewBudget;
+			sourceTree = "<group>";
+		};
+		DD9D4FE62AC8B592004A6CDE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD9D4FE82AC8B5D2004A6CDE /* NewBudgetView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DD9D4FE72AC8B598004A6CDE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DD9D4FEA2AC8B5F0004A6CDE /* NewBudgetViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		DDB1F64A2A6CC8950080A148 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,10 +271,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DDB70CA62ACA6FDF00B25C5F /* MoneyBeeTests */ = {
+			isa = PBXGroup;
+			children = (
+				DDB70CA72ACA6FDF00B25C5F /* MoneyBeeTests.swift */,
+				DDB70CAF2ACA707C00B25C5F /* LoginViewTests.swift */,
+			);
+			path = MoneyBeeTests;
+			sourceTree = "<group>";
+		};
+		DDB70CAE2ACA704500B25C5F /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				DDDF64252A6462D100396F86 /* Registration */,
+				DDDF63F72A644C7E00396F86 /* Login */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		DDDF63D12A644B1000396F86 = {
 			isa = PBXGroup;
 			children = (
 				DDDF63DC2A644B1000396F86 /* MoneyBee */,
+				DDB70CA62ACA6FDF00B25C5F /* MoneyBeeTests */,
 				DDB1F64A2A6CC8950080A148 /* Frameworks */,
 				DDDF63DB2A644B1000396F86 /* Products */,
 			);
@@ -233,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				DDDF63DA2A644B1000396F86 /* MoneyBee.app */,
+				DDB70CA52ACA6FDF00B25C5F /* MoneyBeeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -245,8 +316,7 @@
 				DDECF6D22A72105A009094F2 /* Navigation */,
 				DDDF64032A644D5400396F86 /* Extensions */,
 				DDDF63F12A644B7C00396F86 /* Models */,
-				DDDF64252A6462D100396F86 /* Registration */,
-				DDDF63F72A644C7E00396F86 /* Login */,
+				DDB70CAE2ACA704500B25C5F /* Auth */,
 				DDDF63F62A644BE500396F86 /* SystemFiles */,
 				DDDF63E62A644B1100396F86 /* Assets.xcassets */,
 				DDDF63E82A644B1100396F86 /* LaunchScreen.storyboard */,
@@ -325,6 +395,7 @@
 		DDDF64042A644D7400396F86 /* Budget */ = {
 			isa = PBXGroup;
 			children = (
+				DD9D4FE52AC8B57A004A6CDE /* NewBudget */,
 				DDDF64072A644D8C00396F86 /* Cells */,
 				DDDF64062A644D8200396F86 /* ViewModel */,
 				DDDF64052A644D7C00396F86 /* View */,
@@ -606,6 +677,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DDB70CA42ACA6FDF00B25C5F /* MoneyBeeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDB70CAD2ACA6FDF00B25C5F /* Build configuration list for PBXNativeTarget "MoneyBeeTests" */;
+			buildPhases = (
+				DDB70CA12ACA6FDF00B25C5F /* Sources */,
+				DDB70CA22ACA6FDF00B25C5F /* Frameworks */,
+				DDB70CA32ACA6FDF00B25C5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DDB70CAA2ACA6FDF00B25C5F /* PBXTargetDependency */,
+			);
+			name = MoneyBeeTests;
+			productName = MoneyBeeTests;
+			productReference = DDB70CA52ACA6FDF00B25C5F /* MoneyBeeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		DDDF63D92A644B1000396F86 /* MoneyBee */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDDF63EE2A644B1100396F86 /* Build configuration list for PBXNativeTarget "MoneyBee" */;
@@ -644,9 +733,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					DDB70CA42ACA6FDF00B25C5F = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = DDDF63D92A644B1000396F86;
+					};
 					DDDF63D92A644B1000396F86 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
@@ -672,11 +765,19 @@
 			projectRoot = "";
 			targets = (
 				DDDF63D92A644B1000396F86 /* MoneyBee */,
+				DDB70CA42ACA6FDF00B25C5F /* MoneyBeeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DDB70CA32ACA6FDF00B25C5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DDDF63D82A644B1000396F86 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -690,6 +791,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DDB70CA12ACA6FDF00B25C5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDB70CB02ACA707C00B25C5F /* LoginViewTests.swift in Sources */,
+				DDB70CA82ACA6FDF00B25C5F /* MoneyBeeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DDDF63D62A644B1000396F86 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -708,6 +818,7 @@
 				DDECF6E72A7765EC009094F2 /* DashboardViewModel.swift in Sources */,
 				DD9236A52A8B19F0008FD572 /* Extension+Transition.swift in Sources */,
 				DDECF6E02A77658B009094F2 /* CustomTabBarCoordinator.swift in Sources */,
+				DD9D4FEB2AC8B5F0004A6CDE /* NewBudgetViewModel.swift in Sources */,
 				DDECF7122A776BDD009094F2 /* NewTransactionViewModel.swift in Sources */,
 				DDDF64152A6450F500396F86 /* Extensions + Combine_TextField.swift in Sources */,
 				DDDF641D2A64543B00396F86 /* BudgetViewModel.swift in Sources */,
@@ -736,6 +847,7 @@
 				DDDF63F52A644BAF00396F86 /* GoalModel.swift in Sources */,
 				DDDF640B2A644DCF00396F86 /* BudgetTableViewCell.swift in Sources */,
 				DDDF64112A6450AF00396F86 /* Extension + UIButton.swift in Sources */,
+				DD9D4FE92AC8B5D2004A6CDE /* NewBudgetView.swift in Sources */,
 				DDDF64192A64512A00396F86 /* Extension + Alert.swift in Sources */,
 				DDECF7012A776A15009094F2 /* NewSavingGoalViewController.swift in Sources */,
 				DDDF640F2A64508600396F86 /* Extensions + HideKeyBoard.swift in Sources */,
@@ -759,6 +871,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		DDB70CAA2ACA6FDF00B25C5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDDF63D92A644B1000396F86 /* MoneyBee */;
+			targetProxy = DDB70CA92ACA6FDF00B25C5F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		DDDF63E82A644B1100396F86 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -771,6 +891,53 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DDB70CAB2ACA6FDF00B25C5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZW3N55LCY7;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PavelAndreev.MoneyBeeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoneyBee.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MoneyBee";
+			};
+			name = Debug;
+		};
+		DDB70CAC2ACA6FDF00B25C5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZW3N55LCY7;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = PavelAndreev.MoneyBeeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoneyBee.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MoneyBee";
+			};
+			name = Release;
+		};
 		DDDF63EC2A644B1100396F86 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -950,6 +1117,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DDB70CAD2ACA6FDF00B25C5F /* Build configuration list for PBXNativeTarget "MoneyBeeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDB70CAB2ACA6FDF00B25C5F /* Debug */,
+				DDB70CAC2ACA6FDF00B25C5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DDDF63D52A644B1000396F86 /* Build configuration list for PBXProject "MoneyBee" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

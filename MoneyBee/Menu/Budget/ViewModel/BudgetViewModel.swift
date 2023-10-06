@@ -13,4 +13,6 @@ protocol BudgetViewModel {
     var goals: PassthroughSubject<[GoalModel],Never> { get }
     func fetchGoals()-> AnyPublisher<[GoalModel], Never> 
     
+    func createNewBudget()
+    
 }

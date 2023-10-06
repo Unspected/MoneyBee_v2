@@ -54,6 +54,7 @@ class BudgetViewController: UIViewController {
                 tableView.reloadData()
             }.store(in: &cancellable)
         
+        
     }
     
     private func setupViews() {
