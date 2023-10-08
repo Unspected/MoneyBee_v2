@@ -35,6 +35,7 @@
 		DDB1F6442A6A53840080A148 /* Extensions + String .swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB1F6432A6A53840080A148 /* Extensions + String .swift */; };
 		DDB70CA82ACA6FDF00B25C5F /* MoneyBeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB70CA72ACA6FDF00B25C5F /* MoneyBeeTests.swift */; };
 		DDB70CB02ACA707C00B25C5F /* LoginViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB70CAF2ACA707C00B25C5F /* LoginViewTests.swift */; };
+		DDB70CB22AD1CA9300B25C5F /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB70CB12AD1CA9300B25C5F /* AuthorizationService.swift */; };
 		DDDD78D32AAAEC91001B7232 /* Extensions + HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDD78D22AAAEC91001B7232 /* Extensions + HeaderView.swift */; };
 		DDDF63DE2A644B1000396F86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF63DD2A644B1000396F86 /* AppDelegate.swift */; };
 		DDDF63E02A644B1000396F86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF63DF2A644B1000396F86 /* SceneDelegate.swift */; };
@@ -134,6 +135,7 @@
 		DDB70CA52ACA6FDF00B25C5F /* MoneyBeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyBeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB70CA72ACA6FDF00B25C5F /* MoneyBeeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyBeeTests.swift; sourceTree = "<group>"; };
 		DDB70CAF2ACA707C00B25C5F /* LoginViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewTests.swift; sourceTree = "<group>"; };
+		DDB70CB12AD1CA9300B25C5F /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
 		DDDD78D22AAAEC91001B7232 /* Extensions + HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + HeaderView.swift"; sourceTree = "<group>"; };
 		DDDF63DA2A644B1000396F86 /* MoneyBee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyBee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDDF63DD2A644B1000396F86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				DD0AE1262AB581B300766EFA /* AuthService.swift */,
+				DDB70CB12AD1CA9300B25C5F /* AuthorizationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -840,6 +843,7 @@
 				DDECF6E92A7765F7009094F2 /* DashboardViewModelImpl.swift in Sources */,
 				DDDF641B2A64514C00396F86 /* Extension + Combine_TapButton.swift in Sources */,
 				DDDF64092A644DAE00396F86 /* BudgetViewController.swift in Sources */,
+				DDB70CB22AD1CA9300B25C5F /* AuthorizationService.swift in Sources */,
 				DD7CCB722AC3D7B500877F65 /* ProfileModel.swift in Sources */,
 				DDECF6D52A721076009094F2 /* AppCoordinator.swift in Sources */,
 				DD3634142AA998F400F7495F /* AccountCoordinator.swift in Sources */,

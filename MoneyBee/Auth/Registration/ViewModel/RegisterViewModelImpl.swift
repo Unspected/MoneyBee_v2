@@ -1,18 +1,22 @@
-//
-//  RegisterViewModelImpl.swift
-//  MoneyBee
-//
-//  Created by Pavel Andreev on 7/18/23.
-//
 
 import Foundation
-import RxSwift
-import RxCocoa
 import UIKit
 import XCoordinator
+import Combine
 
 
-class RegisterViewModelImpl: RegisterViewModel {
+class RegisterViewModelImpl  {
+    
+    private var cancellable = Set<AnyCancellable>()
+    
+    private let userNameSubject = CurrentValueSubject<String, Never>("")
+    private let emailSubject = CurrentValueSubject<String, Never>("")
+    private let passwordSubject = CurrentValueSubject<String, Never>("")
+    private let repeatPasswordSubject = CurrentValueSubject<String, Never>("")
+    
+    private let errorSubject = PassthroughSubject<RegisterationError?, Never>()
+    
+    private let authorizationService = AuthorizationService.shared
     
     private let router: UnownedRouter<AppRoute>
 
@@ -20,55 +24,73 @@ class RegisterViewModelImpl: RegisterViewModel {
         self.router = router
     }
     
-    var isValidFullUserData = PublishSubject<Bool>()
+}
+
+extension RegisterViewModelImpl: RegisterViewModel {
     
-    let bag = DisposeBag()
-    
-    var usernamePublisher = BehaviorSubject<String>(value: "")
-    
-    var emailPublisher = BehaviorSubject<String>(value: "")
-    
-    var passwordPublisher = BehaviorSubject<String>(value: "")
-    
-    var repeatPasswordPublisher = BehaviorSubject<String>(value: "")
-    
-    var validPassword = PublishSubject<Bool>()
-    
-    var validUserData = PublishSubject<Bool>()
-    
-    var users = PublishSubject<UserModel>()
-    
-    var users1: BehaviorRelay<UserModel?> = BehaviorRelay(value: nil)
-    
-    func createNewUser() {
-        
-        Observable.combineLatest(passwordPublisher, repeatPasswordPublisher).subscribe { passwordValue,passwordValue2 in
-            if passwordValue.count > 5 && passwordValue == passwordValue2 {
-                self.validPassword.onNext(true)
-            } else {
-                self.validPassword.onNext(false)
-            }
-        }.dispose()
-        
-        Observable.combineLatest(usernamePublisher, emailPublisher).subscribe { username, email in
-            if username.isValidShortname() && email.isValidLoginEmail() {
-                self.validUserData.onNext(true)
-            } else {
-                self.validUserData.onNext(false)
-            }
-        }.dispose()
-    
-//        Observable.combineLatest(validUserData, validPassword).subscribe { validUserAndEmail, validPassword in
-//            if validUserAndEmail && validPassword {
-//                self.isValidFullUserData.onNext(true)
-//            } else {
-//                self.isValidFullUserData.onNext(false)
-//            }
-//        }.disposed(by: bag)
+    var username: AnyPublisher<Bool, Never> {
+        userNameSubject
+            .filter { !$0.isEmpty}
+            .map { $0.isValidUserName() }
+            .eraseToAnyPublisher()
     }
     
+    var email: AnyPublisher<Bool, Never> {
+        emailSubject
+            .filter { !$0.isEmpty }
+            .map { $0.isValidEmail() }
+            .eraseToAnyPublisher()
+    }
     
-   
+    var password: AnyPublisher<Bool, Never> {
+        passwordSubject
+            .filter { !$0.isEmpty }
+            .map { $0.isValidPassword() }
+            .eraseToAnyPublisher()
+    }
     
+    var repeatpassword: AnyPublisher<Bool, Never> {
+        repeatPasswordSubject
+            .filter { !$0.isEmpty }
+            .map { $0.isValidPassword() }
+            .eraseToAnyPublisher()
+    }
+    
+    var validationError: AnyPublisher<RegisterationError?, Never> {
+        errorSubject.eraseToAnyPublisher()
+    }
+    
+    func userNamePublisher(with text: String) {
+        self.userNameSubject.send(text)
+    }
+    
+    func emailPublisher(with email: String) {
+        self.emailSubject.send(email)
+    }
+    
+    func passwordPublisher(with password: String) {
+        self.passwordSubject.send(password)
+    }
+    
+    func repeatPasswordPublisher(with password: String) {
+        self.repeatPasswordSubject.send(password)
+    }
+    
+    private func passwordMatcherPublisher() -> AnyPublisher<Bool, Never> {
+        passwordSubject.combineLatest(repeatPasswordSubject).map { $0 == $1 }.eraseToAnyPublisher()
+    }
+    
+    func isValidatedDataForm() -> AnyPublisher<Bool, Never> {
+        Publishers.CombineLatest4(username, email, password ,passwordMatcherPublisher())
+            .map { $0 && $1 && $2 && $3 }
+            .eraseToAnyPublisher()
+    }
+    
+    func saveCorrectUser() {
+        let user = UserModel(userName: userNameSubject.value,
+                             password: passwordSubject.value,
+                             email: emailSubject.value)
+        authorizationService.addNewUser(user: user)
+    }
     
 }
