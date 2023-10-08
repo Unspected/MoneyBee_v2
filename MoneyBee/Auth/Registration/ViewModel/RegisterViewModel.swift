@@ -1,25 +1,29 @@
-//
-//  RegisterViewModel.swift
-//  MoneyBee
-//
-//  Created by Pavel Andreev on 7/18/23.
-//
 
 import Foundation
-import RxSwift
-import RxCocoa
+import Combine
 
+enum RegisterationError: LocalizedError {
+    case invalidUserName
+    case invalidEmail
+    case invalidPassword
+    case missmatchPasswords
+}
 
 protocol RegisterViewModel {
     
-    var usernamePublisher: BehaviorSubject<String> { get }
-    var emailPublisher: BehaviorSubject<String> { get }
-    var passwordPublisher: BehaviorSubject<String> { get }
-    var repeatPasswordPublisher: BehaviorSubject<String> { get }
-    var users: PublishSubject<UserModel> { get }
-    var validPassword: PublishSubject<Bool> { get}
-    var validUserData: PublishSubject<Bool> { get }
-    var isValidFullUserData: PublishSubject<Bool> { get }
-    func createNewUser()
-    var users1: BehaviorRelay<UserModel?> { get }
+    // input 
+    var username: AnyPublisher<Bool, Never> { get }
+    var email: AnyPublisher<Bool, Never> { get }
+    var password: AnyPublisher<Bool, Never> { get }
+    var repeatpassword: AnyPublisher<Bool, Never> { get }
+    func userNamePublisher(with text: String)
+    func emailPublisher(with email: String)
+    func passwordPublisher(with password: String)
+    func repeatPasswordPublisher(with password: String)
+    
+    // output
+    var validationError: AnyPublisher<RegisterationError?, Never> { get }
+    func isValidatedDataForm() -> AnyPublisher<Bool, Never>
+    func saveCorrectUser()
+    
 }

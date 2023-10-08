@@ -115,8 +115,7 @@ class LoginViewController: UIViewController {
         }).store(in: &cancellable)
         
         createAccountButton.publisher(forEvent: .touchUpInside).sink { [weak self] _ in
-            guard let self else { return }
-            
+            self?.viewModel.signUpButtonPressed()
         }.store(in: &cancellable)
         
     }

@@ -3,16 +3,20 @@ import FirebaseAuth
 import FirebaseFirestore
 import Combine
 
+protocol AuthServiceProtocol {
+    
+    var users: [UserModel] { get }
+    func validLogin(login: String) -> Bool
+}
+
 final class AuthService {
     
-    private var cancellables = Set<AnyCancellable>()
     
-    static let shared = AuthService()
+    private var cancellables = Set<AnyCancellable>()
     
     let db = Firestore.firestore()
     
     private init() {}
-    
     
     /// A method to register user
     /// - Parameter registerModel: the user information (username, email, password)
@@ -48,5 +52,4 @@ final class AuthService {
             })
         }
     }
-    
 }

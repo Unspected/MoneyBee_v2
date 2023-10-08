@@ -27,35 +27,22 @@ class LoginViewModelImpl {
     init(router: UnownedRouter<AppRoute>) {
         self.router = router
     }
-    // TODO move AuthService
-    private let users = [UserModel(userName: "pasha", password: "123", email: ""),
-                 UserModel(userName: "masha", password: "321", email: ""),
-                 UserModel(userName: "vasya", password: "542", email: ""),
-                 UserModel(userName: "petya", password: "643", email: ""),
-                 UserModel(userName: "admin", password: "1", email: "admin")
-    ]
+    
+    let authService = AuthorizationService.shared
     
     private var cancellable = Set<AnyCancellable>()
     
-    private func successAuth() {
-        self.router.trigger(.tabBar)
-    }
-    
-    func signUpButtonPressed() {
-        router.trigger(.registration)
-       }
 
 }
 
 extension LoginViewModelImpl: LoginViewModel {
     
     func signIn(login: String, password: String) {
-        guard login.count > 3 else {
+        if !authService.validLogin(login: login) {
             errorSubject.send(.loginLenghtError)
-            return
         }
-        
-        if users.contains(where: { $0.userName == login && $0.password == password }) {
+
+        if authService.users.contains(where: { $0.userName == login && $0.password == password }) {
             successAuth()
         } else {
             errorSubject.send(.authorizationError)
@@ -64,6 +51,14 @@ extension LoginViewModelImpl: LoginViewModel {
     
     var error: AnyPublisher<LoginViewError?, Never> {
         errorSubject.eraseToAnyPublisher()
+    }
+    
+    func signUpButtonPressed() {
+        router.trigger(.registration)
+    }
+    
+    func successAuth() {
+        self.router.trigger(.tabBar)
     }
     
     
