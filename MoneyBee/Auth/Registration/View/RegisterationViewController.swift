@@ -113,6 +113,7 @@ class RegisterationViewController: UIViewController {
         let button = GradientButton()
         button.setTitle("Create New Account", for: .normal)
         button.setTitleColor(UIColor.whiteColor, for: .normal)
+        button.addTarget(RegisterationViewController.self, action: #selector(createButtonTapped), for: .touchUpInside)
         return button
     }()
 
@@ -141,12 +142,14 @@ class RegisterationViewController: UIViewController {
             self?.viewModel.repeatPasswordPublisher(with: text)
         }.store(in: &cancallables)
         
-        
-        
-        createAccountButton.publisher(forEvent: .touchUpInside).sink { [weak self] _ in
-            print("create button tapped")
+    }
+    
+    @objc func createButtonTapped() {
+        viewModel.isValidatedDataForm().sink { [weak self] result in
+            if !result {
+                self?.simpleAlert(title: "error", message: "incorrect data", buttonTitle: "ok")
+            }
         }.store(in: &cancallables)
-        
     }
     
     private func setupViews() {
