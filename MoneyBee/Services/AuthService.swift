@@ -11,7 +11,6 @@ protocol AuthServiceProtocol {
 
 final class AuthService {
     
-    static let shared = AuthService()
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -53,22 +52,4 @@ final class AuthService {
             })
         }
     }
-}
-// MARK: - AuthServiceProtocol
-extension AuthService: AuthServiceProtocol {
-    
-    var users: [UserModel] {
-        return [UserModel(userName: "pasha", password: "123", email: ""),
-                UserModel(userName: "masha", password: "321", email: ""),
-                UserModel(userName: "vasya", password: "542", email: ""),
-                UserModel(userName: "petya", password: "643", email: ""),
-                UserModel(userName: "admin", password: "1", email: "admin")]
-    }
-    
-    func validLogin(login: String) -> Bool {
-        login.count < 3 ? false : true
-    }
-    
-    
-    
 }

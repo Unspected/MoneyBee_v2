@@ -28,17 +28,10 @@ class LoginViewModelImpl {
         self.router = router
     }
     
-    let authService = AuthService.shared
+    let authService = AuthorizationService.shared
     
     private var cancellable = Set<AnyCancellable>()
     
-    private func successAuth() {
-        self.router.trigger(.tabBar)
-    }
-    
-    func signUpButtonPressed() {
-        router.trigger(.registration)
-       }
 
 }
 
@@ -58,6 +51,14 @@ extension LoginViewModelImpl: LoginViewModel {
     
     var error: AnyPublisher<LoginViewError?, Never> {
         errorSubject.eraseToAnyPublisher()
+    }
+    
+    func signUpButtonPressed() {
+        router.trigger(.registration)
+    }
+    
+    func successAuth() {
+        self.router.trigger(.tabBar)
     }
     
     

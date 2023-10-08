@@ -11,7 +11,8 @@ protocol LoginViewModel {
     
     // MARK: - output
     var error: AnyPublisher<LoginViewError?, Never> { get }
-    
+    func signUpButtonPressed()
+    func successAuth()
 }
 
 
