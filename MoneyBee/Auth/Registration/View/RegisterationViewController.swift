@@ -127,19 +127,19 @@ class RegisterationViewController: UIViewController {
     
     private func bind() {
         usernameTextField.textPublisher.sink { [weak self] text in
-            self?.viewModel.userNamePublisher(with: text)
+            self?.viewModel.userNameSubject.send(text)
         }.store(in: &cancallables)
         
         emailTextField.textPublisher.sink { [weak self] text in
-            self?.viewModel.emailPublisher(with: text)
+            self?.viewModel.emailSubject.send(text)
         }.store(in: &cancallables)
         
         passwordTextField.textPublisher.sink { [weak self] text in
-            self?.viewModel.passwordPublisher(with: text)
+            self?.viewModel.passwordSubject.send(text)
         }.store(in: &cancallables)
         
         confirmPasswordTextField.textPublisher.sink { [weak self] text in
-            self?.viewModel.repeatPasswordPublisher(with: text)
+            self?.viewModel.repeatPasswordSubject.send(text)
         }.store(in: &cancallables)
         
     }

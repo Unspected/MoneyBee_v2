@@ -9,21 +9,24 @@ enum RegisterationError: LocalizedError {
     case missmatchPasswords
 }
 
+enum FormState {
+    case valid
+    case invalid
+    case empty
+}
+
 protocol RegisterViewModel {
     
-    // input 
-    var username: AnyPublisher<Bool, Never> { get }
-    var email: AnyPublisher<Bool, Never> { get }
-    var password: AnyPublisher<Bool, Never> { get }
-    var repeatpassword: AnyPublisher<Bool, Never> { get }
-    func userNamePublisher(with text: String)
-    func emailPublisher(with email: String)
-    func passwordPublisher(with password: String)
-    func repeatPasswordPublisher(with password: String)
+    // input
+    var userNameSubject: CurrentValueSubject<String, Never> { get }
+    var emailSubject: CurrentValueSubject<String, Never> { get }
+    var passwordSubject: CurrentValueSubject<String, Never> { get }
+    var repeatPasswordSubject: CurrentValueSubject<String, Never> { get }
     
     // output
     var validationError: AnyPublisher<RegisterationError?, Never> { get }
     func isValidatedDataForm() -> AnyPublisher<Bool, Never>
     func saveCorrectUser()
+    func loginScreen() 
     
 }
