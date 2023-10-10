@@ -9,11 +9,6 @@ class RegisterViewModelImpl  {
     
     private var cancellable = Set<AnyCancellable>()
     
-    private let userNameSubject = CurrentValueSubject<String, Never>("")
-    private let emailSubject = CurrentValueSubject<String, Never>("")
-    private let passwordSubject = CurrentValueSubject<String, Never>("")
-    private let repeatPasswordSubject = CurrentValueSubject<String, Never>("")
-    
     private let errorSubject = PassthroughSubject<RegisterationError?, Never>()
     
     private let authorizationService = AuthorizationService.shared
@@ -28,28 +23,44 @@ class RegisterViewModelImpl  {
 
 extension RegisterViewModelImpl: RegisterViewModel {
     
-    var username: AnyPublisher<Bool, Never> {
+    var userNameSubject: CurrentValueSubject<String, Never> {
+        .init("")
+    }
+    
+    var emailSubject: CurrentValueSubject<String, Never> {
+        .init("")
+    }
+    
+    var passwordSubject: CurrentValueSubject<String, Never> {
+        .init("")
+    }
+    
+    var repeatPasswordSubject: CurrentValueSubject<String, Never> {
+        .init("")
+    }
+    
+    private var userNameValidation: AnyPublisher<Bool, Never> {
         userNameSubject
             .filter { !$0.isEmpty}
             .map { $0.isValidUserName() }
             .eraseToAnyPublisher()
     }
     
-    var email: AnyPublisher<Bool, Never> {
+    private var emailValidation: AnyPublisher<Bool, Never> {
         emailSubject
             .filter { !$0.isEmpty }
             .map { $0.isValidEmail() }
             .eraseToAnyPublisher()
     }
     
-    var password: AnyPublisher<Bool, Never> {
+    private var passwordValidation: AnyPublisher<Bool, Never> {
         passwordSubject
             .filter { !$0.isEmpty }
             .map { $0.isValidPassword() }
             .eraseToAnyPublisher()
     }
     
-    var repeatpassword: AnyPublisher<Bool, Never> {
+    private var repeatpasswordValidation: AnyPublisher<Bool, Never> {
         repeatPasswordSubject
             .filter { !$0.isEmpty }
             .map { $0.isValidPassword() }
@@ -60,28 +71,12 @@ extension RegisterViewModelImpl: RegisterViewModel {
         errorSubject.eraseToAnyPublisher()
     }
     
-    func userNamePublisher(with text: String) {
-        self.userNameSubject.send(text)
-    }
-    
-    func emailPublisher(with email: String) {
-        self.emailSubject.send(email)
-    }
-    
-    func passwordPublisher(with password: String) {
-        self.passwordSubject.send(password)
-    }
-    
-    func repeatPasswordPublisher(with password: String) {
-        self.repeatPasswordSubject.send(password)
-    }
-    
     private func passwordMatcherPublisher() -> AnyPublisher<Bool, Never> {
         passwordSubject.combineLatest(repeatPasswordSubject).map { $0 == $1 }.eraseToAnyPublisher()
     }
     
     func isValidatedDataForm() -> AnyPublisher<Bool, Never> {
-        Publishers.CombineLatest4(username, email, password ,passwordMatcherPublisher())
+        Publishers.CombineLatest4(userNameValidation, emailValidation, passwordValidation , passwordMatcherPublisher())
             .map { $0 && $1 && $2 && $3 }
             .eraseToAnyPublisher()
     }
@@ -93,4 +88,7 @@ extension RegisterViewModelImpl: RegisterViewModel {
         authorizationService.addNewUser(user: user)
     }
     
+    func loginScreen() {
+        self.router.trigger(.login)
+    }
 }
