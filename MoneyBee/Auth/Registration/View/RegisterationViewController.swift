@@ -2,6 +2,7 @@
 import UIKit
 import Stevia
 import RxSwift
+import RxCocoa
 import Combine
 
 class RegisterationViewController: UIViewController {
@@ -9,6 +10,8 @@ class RegisterationViewController: UIViewController {
     private var viewModel: RegisterViewModel!
     
     private var cancallables = Set<AnyCancellable>()
+    
+    private var disposeBag = DisposeBag()
     
     init(viewModel: RegisterViewModel!) {
         self.viewModel = viewModel
@@ -54,6 +57,7 @@ class RegisterationViewController: UIViewController {
         textField.layer.cornerRadius = 10
         textField.textColor = .whiteColor
         textField.autocapitalizationType = .none
+        textField.clearButtonMode = .whileEditing
         return textField
     }()
     
@@ -70,6 +74,7 @@ class RegisterationViewController: UIViewController {
         textField.backgroundColor = .backgroundTextField
         textField.layer.cornerRadius = 10
         textField.textColor = .whiteColor
+        textField.clearButtonMode = .whileEditing
         textField.autocapitalizationType = .none
         return textField
     }()
@@ -88,10 +93,11 @@ class RegisterationViewController: UIViewController {
         textField.layer.cornerRadius = 10
         textField.textColor = .whiteColor
         textField.autocapitalizationType = .none
+        textField.clearButtonMode = .whileEditing
         return textField
     }()
     
-    private let confirmPasswordLabel: UILabel = {
+    private let repeatPasswordLabel: UILabel = {
        let label = UILabel()
         label.text = "Confirm Password"
         label.textColor = .white
@@ -99,21 +105,21 @@ class RegisterationViewController: UIViewController {
         return label
     }()
     
-    private let confirmPasswordTextField: UITextField = {
+    private let repeatPasswordTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .backgroundTextField
         textField.layer.cornerRadius = 10
         textField.textColor = .whiteColor
+        textField.clearButtonMode = .whileEditing
         textField.autocapitalizationType = .none
         return textField
     }()
     
     // TODO настроить состояние кнопки enable когда поля пустые и заполнение
-    let createAccountButton: UIButton = {
+    private let createAccountButton: UIButton = {
         let button = GradientButton()
         button.setTitle("Create New Account", for: .normal)
         button.setTitleColor(UIColor.whiteColor, for: .normal)
-        button.addTarget(RegisterationViewController.self, action: #selector(createButtonTapped), for: .touchUpInside)
         return button
     }()
 
@@ -138,18 +144,29 @@ class RegisterationViewController: UIViewController {
             self?.viewModel.passwordSubject.send(text)
         }.store(in: &cancallables)
         
-        confirmPasswordTextField.textPublisher.sink { [weak self] text in
+        repeatPasswordTextField.textPublisher.sink { [weak self] text in
             self?.viewModel.repeatPasswordSubject.send(text)
         }.store(in: &cancallables)
         
-    }
-    
-    @objc func createButtonTapped() {
-        viewModel.isValidatedDataForm().sink { [weak self] result in
-            if !result {
-                self?.simpleAlert(title: "error", message: "incorrect data", buttonTitle: "ok")
-            }
-        }.store(in: &cancallables)
+        createAccountButton.rx.tap.bind {  _ in
+            print("TAP")
+            self.viewModel.isValidatedDataForm.sink(receiveValue: { [weak self] result in
+                guard let self else { return }
+                print("inside the validData Form")
+                if !result {
+                    self.simpleAlert(title: "Error", message: "erro", buttonTitle: "ok")
+                } else {
+                    self.viewModel.saveCorrectUser()
+                    self.viewModel.loginScreen()
+                    self.usernameTextField.text = ""
+                    self.emailTextField.text = ""
+                    self.passwordTextField.text = ""
+                    self.repeatPasswordTextField.text = ""
+                }
+            }).store(in: &self.cancallables)
+            
+        }.disposed(by: disposeBag)
+        
     }
     
     private func setupViews() {
@@ -168,8 +185,8 @@ class RegisterationViewController: UIViewController {
             emailTextField
             passwordLabel
             passwordTextField
-            confirmPasswordLabel
-            confirmPasswordTextField
+            repeatPasswordLabel
+            repeatPasswordTextField
             createAccountButton
             
         }
@@ -201,9 +218,9 @@ class RegisterationViewController: UIViewController {
             5,
             |-60-passwordTextField-60-| ~ 45,
             20,
-            |-60-confirmPasswordLabel| ~ 10,
+            |-60-repeatPasswordLabel| ~ 10,
             5,
-            |-60-confirmPasswordTextField-60-| ~ 45,
+            |-60-repeatPasswordTextField-60-| ~ 45,
             100,
             |-40-createAccountButton-40-| ~ 45,
             15%

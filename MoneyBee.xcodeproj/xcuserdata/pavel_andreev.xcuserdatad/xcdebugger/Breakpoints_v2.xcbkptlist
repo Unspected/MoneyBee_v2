@@ -3,4 +3,246 @@
    uuid = "9E3ECE73-621C-4EFF-BC7B-2629949F9850"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "430684A8-303D-4A79-9042-3F4D2DC9E61C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoneyBee/Auth/Registration/ViewModel/RegisterViewModelImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "repeatpasswordValidation"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FAB40AD7-5E46-48B1-AB9F-6971371DEF3F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoneyBee/Auth/Registration/ViewModel/RegisterViewModelImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "passwordValidation"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "FAB40AD7-5E46-48B1-AB9F-6971371DEF3F - 4ae49dd67ae1f08e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MoneyBee.RegisterViewModelImpl.passwordValidation.getter : Combine.AnyPublisher&lt;Swift.Bool, Swift.Never&gt;"
+                  moduleName = "MoneyBee"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavel_andreev/Desktop/Portfolio/MoneyBee/MoneyBee/Auth/Registration/ViewModel/RegisterViewModelImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  uuid = "FAB40AD7-5E46-48B1-AB9F-6971371DEF3F - ebbaa0d7142c2403"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.String) -&gt; Swift.Bool in MoneyBee.RegisterViewModelImpl.passwordValidation.getter : Combine.AnyPublisher&lt;Swift.Bool, Swift.Never&gt;"
+                  moduleName = "MoneyBee"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavel_andreev/Desktop/Portfolio/MoneyBee/MoneyBee/Auth/Registration/ViewModel/RegisterViewModelImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F35A4586-E3F2-4FEF-ADBD-91E3A9A6F26A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoneyBee/Auth/Registration/ViewModel/RegisterViewModelImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "emailValidation"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "F35A4586-E3F2-4FEF-ADBD-91E3A9A6F26A - 59ce947842f235f5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MoneyBee.RegisterViewModelImpl.emailValidation.getter : Combine.AnyPublisher&lt;Swift.Bool, Swift.Never&gt;"
+                  moduleName = "MoneyBee"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavel_andreev/Desktop/Portfolio/MoneyBee/MoneyBee/Auth/Registration/ViewModel/RegisterViewModelImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  uuid = "F35A4586-E3F2-4FEF-ADBD-91E3A9A6F26A - 682ba254d06b19cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.String) -&gt; Swift.Bool in MoneyBee.RegisterViewModelImpl.emailValidation.getter : Combine.AnyPublisher&lt;Swift.Bool, Swift.Never&gt;"
+                  moduleName = "MoneyBee"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavel_andreev/Desktop/Portfolio/MoneyBee/MoneyBee/Auth/Registration/ViewModel/RegisterViewModelImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A981486C-F611-48E8-8320-90D91880DFF0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoneyBee/Auth/Registration/ViewModel/RegisterViewModelImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "userNameValidation"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "A981486C-F611-48E8-8320-90D91880DFF0 - 198dfdced98a3b29"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MoneyBee.RegisterViewModelImpl.userNameValidation.getter : Combine.AnyPublisher&lt;Swift.Bool, Swift.Never&gt;"
+                  moduleName = "MoneyBee"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavel_andreev/Desktop/Portfolio/MoneyBee/MoneyBee/Auth/Registration/ViewModel/RegisterViewModelImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  uuid = "A981486C-F611-48E8-8320-90D91880DFF0 - e72e99fc71f04284"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.String) -&gt; Swift.Bool in MoneyBee.RegisterViewModelImpl.userNameValidation.getter : Combine.AnyPublisher&lt;Swift.Bool, Swift.Never&gt;"
+                  moduleName = "MoneyBee"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavel_andreev/Desktop/Portfolio/MoneyBee/MoneyBee/Auth/Registration/ViewModel/RegisterViewModelImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8E2DA505-BB2C-4B17-AD98-72172696DEA2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoneyBee/Auth/Registration/View/RegisterationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "bind()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8E2DA505-BB2C-4B17-AD98-72172696DEA2 - 92455ca9a0581f24"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #5 (()) -&gt; () in MoneyBee.RegisterationViewController.bind() -&gt; ()"
+                  moduleName = "MoneyBee"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavel_andreev/Desktop/Portfolio/MoneyBee/MoneyBee/Auth/Registration/View/RegisterationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "150"
+                  endingLineNumber = "150"
+                  offsetFromSymbolStart = "284">
+               </Location>
+               <Location
+                  uuid = "8E2DA505-BB2C-4B17-AD98-72172696DEA2 - 8a05a2890be49ba2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in closure #5 (()) -&gt; () in MoneyBee.RegisterationViewController.bind() -&gt; ()"
+                  moduleName = "MoneyBee"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pavel_andreev/Desktop/Portfolio/MoneyBee/MoneyBee/Auth/Registration/View/RegisterationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "150"
+                  endingLineNumber = "150"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E4EE6BB1-237E-4D6D-B63F-E208363EE495"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoneyBee/Auth/Registration/View/RegisterationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "bind()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A6AA00E2-BCCA-46F4-87F1-55425186A0F6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoneyBee/Auth/Registration/View/RegisterationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
+            landmarkName = "bind()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
