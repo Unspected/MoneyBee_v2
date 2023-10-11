@@ -75,7 +75,7 @@ extension RegisterViewModelImpl: RegisterViewModel {
         passwordSubject.combineLatest(repeatPasswordSubject).map { $0 == $1 }.eraseToAnyPublisher()
     }
     
-    func isValidatedDataForm() -> AnyPublisher<Bool, Never> {
+    var isValidatedDataForm: AnyPublisher<Bool, Never> {
         Publishers.CombineLatest4(userNameValidation, emailValidation, passwordValidation , passwordMatcherPublisher())
             .map { $0 && $1 && $2 && $3 }
             .eraseToAnyPublisher()

@@ -25,7 +25,7 @@ protocol RegisterViewModel {
     
     // output
     var validationError: AnyPublisher<RegisterationError?, Never> { get }
-    func isValidatedDataForm() -> AnyPublisher<Bool, Never>
+    var isValidatedDataForm: AnyPublisher<Bool, Never> { get }
     func saveCorrectUser()
     func loginScreen() 
     
