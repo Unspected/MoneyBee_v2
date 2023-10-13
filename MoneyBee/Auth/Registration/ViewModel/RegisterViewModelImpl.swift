@@ -22,6 +22,7 @@ class RegisterViewModelImpl  {
     
 }
 
+// TODO Нужно собрать массив все оошибки и после передать в Error subject что бы из этого сделать точное описание ошибки при регистрации
 extension RegisterViewModelImpl: RegisterViewModel {
     
     var userNameSubject: CurrentValueSubject<String, Never> {

@@ -14,8 +14,8 @@
             filePath = "MoneyBee/Auth/Registration/ViewModel/RegisterViewModelImpl.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "repeatpasswordValidation"
             landmarkType = "24">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "MoneyBee/Auth/Registration/ViewModel/RegisterViewModelImpl.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "passwordValidation"
             landmarkType = "24">
             <Locations>
@@ -78,8 +78,8 @@
             filePath = "MoneyBee/Auth/Registration/ViewModel/RegisterViewModelImpl.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "emailValidation"
             landmarkType = "24">
             <Locations>
@@ -126,8 +126,8 @@
             filePath = "MoneyBee/Auth/Registration/ViewModel/RegisterViewModelImpl.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "userNameValidation"
             landmarkType = "24">
             <Locations>
