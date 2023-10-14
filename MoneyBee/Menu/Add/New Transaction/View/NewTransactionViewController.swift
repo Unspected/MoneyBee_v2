@@ -1,13 +1,13 @@
-
 import UIKit
 
-final class NewCategoryViewController: UIViewController {
+final class NewTransactionViewController: UIViewController {
     
-    private var viewModel: NewCategoryViewModel!
+    private var viewModel: NewTransactionViewModel!
     
-    init(viewModel: NewCategoryViewModel) {
+    init(viewModel: NewTransactionViewModel!) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        
     }
     
     required init?(coder: NSCoder) {
@@ -20,10 +20,10 @@ final class NewCategoryViewController: UIViewController {
         setupViews()
     }
     
-
+    
 }
 
-extension NewCategoryViewController {
+extension NewTransactionViewController {
     
     private func setupViews() {
         view.backgroundColor = .darkGray

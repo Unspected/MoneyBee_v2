@@ -1,8 +1,11 @@
-//
-//  NewSavingGoalModelImpl.swift
-//  MoneyBee
-//
-//  Created by Pavel Andreev on 7/30/23.
-//
-
+import XCoordinator
 import Foundation
+
+final class NewSavingGoalModelImpl: NewSavingGoalModel {
+    
+    private let router: UnownedRouter<AddRoute>
+
+    init(router: UnownedRouter<AddRoute>) {
+        self.router = router
+    }
+}

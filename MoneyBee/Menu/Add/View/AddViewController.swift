@@ -71,16 +71,16 @@ class AddViewController: UIViewController {
     }
     
     private func bind() {
-        newTransactionButton.publisher(forEvent: .touchUpInside).sink { _ in
-            print("TRANSACTION")
+        newTransactionButton.publisher(forEvent: .touchUpInside).sink { [weak self] _ in
+            self?.viewModel.presentTransctionView()
         }.store(in: &cancellable)
         
-        newCategoryButton.publisher(forEvent: .touchUpInside).sink { _ in
-            print("CATEGORY")
+        newCategoryButton.publisher(forEvent: .touchUpInside).sink { [weak self] _ in
+            self?.viewModel.presentCategoryView()
         }.store(in: &cancellable)
         
-        newGoalButton.publisher(forEvent: .touchUpInside).sink { _ in
-            print("NEW GOAL")
+        newGoalButton.publisher(forEvent: .touchUpInside).sink { [weak self] _ in
+            self?.viewModel.presentGoalView()
         }.store(in: &cancellable)
     }
     

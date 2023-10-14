@@ -37,6 +37,7 @@
 		DDB70CB02ACA707C00B25C5F /* LoginViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB70CAF2ACA707C00B25C5F /* LoginViewTests.swift */; };
 		DDB70CB22AD1CA9300B25C5F /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB70CB12AD1CA9300B25C5F /* AuthorizationService.swift */; };
 		DDB70CB42AD8E32A00B25C5F /* Extensions+StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB70CB32AD8E32A00B25C5F /* Extensions+StackView.swift */; };
+		DDCBE8422ADB2641004FD6A8 /* NewTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCBE8412ADB2641004FD6A8 /* NewTransactionViewController.swift */; };
 		DDDD78D32AAAEC91001B7232 /* Extensions + HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDD78D22AAAEC91001B7232 /* Extensions + HeaderView.swift */; };
 		DDDF63DE2A644B1000396F86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF63DD2A644B1000396F86 /* AppDelegate.swift */; };
 		DDDF63E02A644B1000396F86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF63DF2A644B1000396F86 /* SceneDelegate.swift */; };
@@ -138,6 +139,7 @@
 		DDB70CAF2ACA707C00B25C5F /* LoginViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewTests.swift; sourceTree = "<group>"; };
 		DDB70CB12AD1CA9300B25C5F /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
 		DDB70CB32AD8E32A00B25C5F /* Extensions+StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+StackView.swift"; sourceTree = "<group>"; };
+		DDCBE8412ADB2641004FD6A8 /* NewTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransactionViewController.swift; sourceTree = "<group>"; };
 		DDDD78D22AAAEC91001B7232 /* Extensions + HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + HeaderView.swift"; sourceTree = "<group>"; };
 		DDDF63DA2A644B1000396F86 /* MoneyBee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyBee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDDF63DD2A644B1000396F86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -628,6 +630,7 @@
 		DDECF70F2A776BC9009094F2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DDCBE8412ADB2641004FD6A8 /* NewTransactionViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -834,6 +837,7 @@
 				DDECF6E52A7765DA009094F2 /* DashboardViewController.swift in Sources */,
 				DDECF7062A776A3D009094F2 /* NewSavingGoalModelImpl.swift in Sources */,
 				DDDF642C2A650F5800396F86 /* RegisterationViewController.swift in Sources */,
+				DDCBE8422ADB2641004FD6A8 /* NewTransactionViewController.swift in Sources */,
 				DD0AE1272AB581B300766EFA /* AuthService.swift in Sources */,
 				DD3634102AA9976000F7495F /* GoalsCoordinator.swift in Sources */,
 				DD5D42052AC88DEE00FF3581 /* GoalCollectionViewCell.swift in Sources */,

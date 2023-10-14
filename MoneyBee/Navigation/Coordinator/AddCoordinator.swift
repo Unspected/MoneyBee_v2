@@ -5,6 +5,9 @@ enum AddRoute: Route {
     case add
     case pop
     case dismiss
+    case newTransaction
+    case newGoal
+    case newCategory
 }
 
 final class AddCoordinator: NavigationCoordinator<AddRoute> {
@@ -18,6 +21,18 @@ final class AddCoordinator: NavigationCoordinator<AddRoute> {
         case .add:
             let viewModel = AddViewModelImpl(router: unownedRouter)
             let viewController = AddViewController(viewModel: viewModel)
+            return .push(viewController)
+        case .newTransaction:
+            let viewModel = NewTransactionViewModelImpl(router: unownedRouter)
+            let viewController = NewTransactionViewController(viewModel: viewModel)
+            return  .push(viewController)
+        case .newCategory:
+            let viewModel = NewCategoryViewModelImpl(router: unownedRouter)
+            let viewController = NewCategoryViewController(viewModel:  viewModel)
+            return .push(viewController)
+        case .newGoal:
+            let viewModel = NewSavingGoalModelImpl(router: unownedRouter)
+            let viewController = NewSavingGoalViewController(viewModel: viewModel)
             return .push(viewController)
         case .dismiss:
             return .dismiss()
